@@ -36,7 +36,7 @@ const MobileMenu = ({links}) => {
       position: "fixed", // have to make this fixed for some reason
       width: "36px",
       height: "30px",
-      left: width - 50 + "px",
+      left: width - 65 + "px",
       top: "1rem",
     },
     bmBurgerBars: {
@@ -68,11 +68,12 @@ const MobileMenu = ({links}) => {
 
   return (
     <Menu right styles={styles} customBurgerIcon={<MenuIcon />}>
-      {links.map((link) => {
+      {links.map((link, index) => {
         return (
-          <Link
+          <Link 
+            key={index}
             className={MenuStyle.link}
-            activeClassName={MenuStyle.active_link}
+            // activeClassName={MenuStyle.active_link}
             to={link.path}
           >
             {link.name}

@@ -1,17 +1,16 @@
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import React from "react";
 import MobileMenu from "./MobileMenu";
-
+import CameraIcon from "@material-ui/icons/PhotoCamera";
+import { Link } from "react-router-dom";
 
 const Header = ({ links }) => {
- 
   return (
     <>
       <AppBar position="sticky">
-        <Toolbar >
-          {/* <CameraIcon /> */}
+        {/* TODO Temporarily using inline styling to fix colour */}
+        <Toolbar style={{ backgroundColor: "black" }}>
+          <CameraIcon />
           {/* <CameraIcon className={classes.icon} /> */}
           <Typography variant="h6" color="inherit" noWrap>
             Blog name

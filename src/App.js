@@ -1,24 +1,28 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import About from "./pages/About";
-import Home from "./pages/Home";
-import { Header } from "./components/Header";
-import { Teams } from "./pages/Teams";
 import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import ScrollToTop from "./components/ScrollToTop";
+import Home from "./pages/Home";
+import routes from "./constants/routes"
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <ScrollToTop />
+        <Header links={routes} />
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/teams">
-            <Teams />
-          </Route>
+          {routes.map((route) => {
+            if (route.path === "/")
+              return null;
+            return (
+              <Route path={route.path}>
+                {route.component}
+              </Route>
+            );
+          })}
           <Route path="/">
-            <Home />
+            <Home/>
           </Route>
         </Switch>
       </BrowserRouter>
