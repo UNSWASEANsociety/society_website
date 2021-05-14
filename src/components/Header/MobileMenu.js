@@ -5,38 +5,31 @@ import { useEffect } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 
+import getWidth from "../../utils/getwidth"
 import MenuStyle from "./MobileMenu.module.scss";
 
-function getWidth() {
-  return Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.documentElement.clientWidth
-  );
-}
+
 
 const MobileMenu = ({links}) => {
-  const [width, setWidth] = useState(getWidth());
-  useEffect(() => {
-    const changeWidth = () => {
-      setWidth(getWidth());
-    };
-    // window.addEventListener("resize", changeWidth, true);
-    window.addEventListener("resize", changeWidth, true);
+  // const [width, setWidth] = useState(getWidth());
+  // useEffect(() => {
+  //   const changeWidth = () => {
+  //     setWidth(getWidth());
+  //   };
+  //   // window.addEventListener("resize", changeWidth, true);
+  //   window.addEventListener("resize", changeWidth, true);
 
-    return () => {
-      window.removeEventListener("resize", changeWidth, true);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", changeWidth, true);
+  //   };
+  // }, []);
 
   const styles = {
     bmBurgerButton: {
       position: "fixed", // have to make this fixed for some reason
       width: "36px",
       height: "30px",
-      left: width - 65 + "px",
+      left: getWidth() - 50 + "px",
       top: "1rem",
     },
     bmBurgerBars: {

@@ -1,5 +1,7 @@
 .root {
     background-color: beige;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 53% 91%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 50% 98%, 0 100%, 0 0);
 }
 
 .innerContent {
