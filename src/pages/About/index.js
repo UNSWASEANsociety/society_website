@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import { ParallaxBlock, Block } from "../../components/Block";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const TestCarousel = () => {
   return (
@@ -13,8 +14,7 @@ const TestCarousel = () => {
         style={{
           height: "100%",
           width: "100%",
-          backgroundImage:
-            'url("https://source.unsplash.com/random")',
+          backgroundImage: 'url("https://source.unsplash.com/random")',
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -25,8 +25,7 @@ const TestCarousel = () => {
         style={{
           height: "100%",
           width: "100%",
-          backgroundImage:
-            'url("https://source.unsplash.com/random")',
+          backgroundImage: 'url("https://source.unsplash.com/random")',
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -57,9 +56,6 @@ const About = () => {
           Carousel
         </Typography>
         <TestCarousel />
-      </Block>
-      <Block style={{backgroundColor: "indigo"}}>
-        
       </Block>
     </>
   );

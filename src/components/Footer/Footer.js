@@ -3,6 +3,8 @@ import Typography from "@material-ui/core/Typography";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
+import SocialMediaLinks from "./SocialMediaLinks";
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -40,6 +42,7 @@ const Footer = () => {
         >
           Something here to give the footer a purpose!
         </Typography>
+        <SocialMediaLinks />
         <Copyright />
       </footer>
     </>

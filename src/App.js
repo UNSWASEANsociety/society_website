@@ -3,7 +3,7 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
-import routes from "./constants/routes"
+import routes from "./constants/routes";
 
 function App() {
   return (
@@ -13,20 +13,15 @@ function App() {
         <Header links={routes} />
         <Switch>
           {routes.map((route) => {
-            if (route.path === "/")
-              return null;
-            return (
-              <Route path={route.path}>
-                {route.component}
-              </Route>
-            );
+            if (route.path === "/") return null;
+            return <Route path={route.path}>{route.component}</Route>;
           })}
           <Route path="/">
-            <Home/>
+            <Home />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </>
   );
 }
