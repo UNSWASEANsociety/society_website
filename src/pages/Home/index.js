@@ -4,23 +4,25 @@ import { ParallaxBlock } from "../../components/Block";
 import { Block } from "../../components/Block";
 import { Grid } from "@material-ui/core";
 
-import {TypingText} from "../../components/TypingText"
+import { TypingText } from "../../components/TypingText";
 
 const Home = () => {
-
-
   return (
     <>
       <ParallaxBlock image="https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
         <Typography component="h1" variant="h2" align="center" gutterBottom>
-          <TypingText text="Welcome to the home page!!!" speed={100} typePrompt="|"/>
+          <TypingText
+            text="Welcome to the home page!!!"
+            speed={50}
+            typePrompt="|"
+          />
         </Typography>
         <Typography variant="h5" align="center" paragraph>
           Home page
         </Typography>
       </ParallaxBlock>
 
-      <Block style={{backgroundColor: "white"}}>
+      <Block>
         <Grid container>
           <Grid item md={5}>
             <Typography component="h1" variant="h2" align="center" gutterBottom>
@@ -69,7 +71,7 @@ const Home = () => {
           </Grid>
         </Grid>
       </Block>
-      <Block>
+      <Block style={{ backgroundColor: "white" }}>
         {/* <h1>
             Something short and leading about the collection below—its contents,
             the creator, etc. Make it short and sweet, but not too short so
@@ -82,18 +84,38 @@ const Home = () => {
             </Typography>
             <Typography variant="h5" align="center" paragraph>
               This is a pretty good picture yeah?
-              <br/>- martin luther king
+              <br />- martin luther king
             </Typography>
           </Grid>
-          <Grid item md = {1} >
-
-          </Grid>
+          <Grid item md={1}></Grid>
           <Grid item md={8}>
             <img
               src="https://images.unsplash.com/photo-1466781783364-36c955e42a7f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
               alt=""
               width="100%"
             />
+          </Grid>
+        </Grid>
+      </Block>
+
+      <Block>
+        <Grid container>
+          <Grid item md={8}>
+            <img
+              src="https://source.unsplash.com/random"
+              alt=""
+              width="100%"
+            />
+          </Grid>
+          <Grid item md={1}></Grid>
+          <Grid item md={3}>
+            <Typography component="h1" variant="h2"  align="center" gutterBottom>
+              About
+            </Typography>
+            <Typography variant="h5" align="center" paragraph>
+              This is a pretty good picture yeah?
+              <br />- Author 2
+            </Typography>
           </Grid>
         </Grid>
       </Block>

@@ -1,7 +1,6 @@
 import React from "react";
 import { push as Menu } from "react-burger-menu";
-import { useState } from "react";
-import { useEffect } from "react";
+
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
 
@@ -11,19 +10,6 @@ import MenuStyle from "./MobileMenu.module.scss";
 
 
 const MobileMenu = ({links}) => {
-  // const [width, setWidth] = useState(getWidth());
-  // useEffect(() => {
-  //   const changeWidth = () => {
-  //     setWidth(getWidth());
-  //   };
-  //   // window.addEventListener("resize", changeWidth, true);
-  //   window.addEventListener("resize", changeWidth, true);
-
-  //   return () => {
-  //     window.removeEventListener("resize", changeWidth, true);
-  //   };
-  // }, []);
-
   const styles = {
     bmBurgerButton: {
       position: "fixed", // have to make this fixed for some reason
