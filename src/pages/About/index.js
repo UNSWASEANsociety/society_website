@@ -35,6 +35,7 @@ const TestCarousel = () => {
 };
 
 const About = () => {
+
   return (
     <>
       <ParallaxBlock
@@ -61,7 +62,7 @@ const About = () => {
           The Three ASEAN Pillars…
         </Typography>
         <Grid container>
-          <Grid item md={4} style={{padding: "0 1rem"}}>
+          <Grid item md={4} style={{ padding: "0 1rem" }}>
             <img
               src="https://images.squarespace-cdn.com/content/v1/5eba756bbb839b7b67d0b667/1590486769648-U7EOEEJJSX8VJ2XS7IS8/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0kT3PXaDTw6fk-7hFv8qtuO9cQCsc0TvODI6VkiZtuEfknLoiRIu-kWfCHsqWGB43w/Socio-Cultural+Community.png?format=500w"
               width="100%"
@@ -79,7 +80,7 @@ const About = () => {
               ASEAN.
             </Typography>
           </Grid>
-          <Grid item md={4} style={{padding: "0 1rem"}}>
+          <Grid item md={4} style={{ padding: "0 1rem" }}>
             <img
               src="https://images.squarespace-cdn.com/content/v1/5eba756bbb839b7b67d0b667/1590486769648-U7EOEEJJSX8VJ2XS7IS8/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0kT3PXaDTw6fk-7hFv8qtuO9cQCsc0TvODI6VkiZtuEfknLoiRIu-kWfCHsqWGB43w/Socio-Cultural+Community.png?format=500w"
               width="100%"
@@ -97,7 +98,7 @@ const About = () => {
               ASEAN.
             </Typography>
           </Grid>
-          <Grid item md={4} style={{padding: "0 1rem"}}>
+          <Grid item md={4} style={{ padding: "0 1rem" }}>
             <img
               src="https://images.squarespace-cdn.com/content/v1/5eba756bbb839b7b67d0b667/1590486769648-U7EOEEJJSX8VJ2XS7IS8/ke17ZwdGBToddI8pDm48kDHPSfPanjkWqhH6pl6g5ph7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0kT3PXaDTw6fk-7hFv8qtuO9cQCsc0TvODI6VkiZtuEfknLoiRIu-kWfCHsqWGB43w/Socio-Cultural+Community.png?format=500w"
               width="100%"
@@ -117,6 +118,7 @@ const About = () => {
           </Grid>
         </Grid>
       </Block>
+     
     </>
   );
 };

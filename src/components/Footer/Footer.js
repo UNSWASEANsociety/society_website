@@ -1,8 +1,8 @@
 import Link from "@material-ui/core/Link";
+import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-
+import Fade from "react-reveal/Fade";
 import SocialMediaLinks from "./SocialMediaLinks";
 
 function Copyright() {
@@ -31,19 +31,21 @@ const Footer = () => {
   return (
     <>
       <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="textSecondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-        <SocialMediaLinks />
-        <Copyright />
+        <Fade bottom>
+          <Typography variant="h6" align="center" gutterBottom>
+            Footer
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            color="textSecondary"
+            component="p"
+          >
+            Something here to give the footer a purpose!
+          </Typography>
+          <SocialMediaLinks />
+          <Copyright />
+        </Fade>
       </footer>
     </>
   );

@@ -2,9 +2,15 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { ParallaxBlock } from "../../components/Block";
 import { Block } from "../../components/Block";
-import { Grid } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
+import { Youtube } from "../../components/Youtube";
+import { Card } from "../../components/Card";
 
 import { TypingText } from "../../components/TypingText";
+import Categories from "./Categories";
+import CardOnCard from "./CardOnCard";
+
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const Home = () => {
   return (
@@ -19,6 +25,11 @@ const Home = () => {
         </Typography>
         <Typography variant="h5" align="center" paragraph>
           Home page
+        </Typography>
+        <Typography component="h1" align="center" paragraph>
+          <Button variant="outlined" color="white">
+            Button
+          </Button>
         </Typography>
       </ParallaxBlock>
 
@@ -101,15 +112,11 @@ const Home = () => {
       <Block>
         <Grid container>
           <Grid item md={8}>
-            <img
-              src="https://source.unsplash.com/random"
-              alt=""
-              width="100%"
-            />
+            <img src="https://source.unsplash.com/random" alt="" width="100%" />
           </Grid>
           <Grid item md={1}></Grid>
           <Grid item md={3}>
-            <Typography component="h1" variant="h2"  align="center" gutterBottom>
+            <Typography component="h1" variant="h2" align="center" gutterBottom>
               About
             </Typography>
             <Typography variant="h5" align="center" paragraph>
@@ -118,6 +125,16 @@ const Home = () => {
             </Typography>
           </Grid>
         </Grid>
+      </Block>
+      <Block>
+        <Categories />
+        <CardOnCard />
+      </Block>
+      <Block>
+        <Typography component="h1" variant="h2" align="center" gutterBottom>
+          Youtube Video
+        </Typography>
+        <Youtube videoId="dQw4w9WgXcQ" />
       </Block>
     </>
   );

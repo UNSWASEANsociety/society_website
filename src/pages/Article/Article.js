@@ -17,9 +17,18 @@ const Article = () => {
   return (
     <>
       <Block style={{ backgroundColor: "white" }}>
+        <Typography component="h6" align="center" gutterBottom>
+          15/5/2021
+        </Typography>
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           Article
         </Typography>
+
+        <img
+          src="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="random"
+          width="100%"
+        />
         <Typography variant="h5" paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           in risus id tortor euismod elementum. Mauris vitae sollicitudin dolor.
