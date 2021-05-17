@@ -4,6 +4,8 @@ import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import { Grid } from "@material-ui/core";
 import { Block, ParallaxBlock } from "../../components/Block";
+import { Accordion } from "../../components/Accordion";
+import { TimeLine } from "../../components/TimeLine";
 
 const TestCarousel = () => {
   return (
@@ -35,7 +37,6 @@ const TestCarousel = () => {
 };
 
 const About = () => {
-
   return (
     <>
       <ParallaxBlock
@@ -118,7 +119,18 @@ const About = () => {
           </Grid>
         </Grid>
       </Block>
-     
+      <Block>
+        <Typography component="h1" variant="h2" align="center" gutterBottom>
+          Some accordion
+        </Typography>
+        <Accordion />
+      </Block>
+      <Block>
+        <Typography component="h1" variant="h2" align="center" gutterBottom>
+          Some timeline library
+        </Typography>
+        <TimeLine />
+      </Block>
     </>
   );
 };

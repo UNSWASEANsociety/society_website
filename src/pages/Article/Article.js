@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Block } from "../../components/Block";
+import { Block, ParallaxBlock } from "../../components/Block";
 import { Card } from "../../components/Card";
 
 const cards = [1, 2, 3];
@@ -16,19 +16,15 @@ const Article = () => {
   console.log(id);
   return (
     <>
-      <Block style={{ backgroundColor: "white" }}>
+      <ParallaxBlock image="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
         <Typography component="h6" align="center" gutterBottom>
           15/5/2021
         </Typography>
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           Article
         </Typography>
-
-        <img
-          src="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-          alt="random"
-          width="100%"
-        />
+      </ParallaxBlock>
+      <Block style={{ backgroundColor: "white" }}>
         <Typography variant="h5" paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           in risus id tortor euismod elementum. Mauris vitae sollicitudin dolor.
