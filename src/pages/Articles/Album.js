@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import React from "react";
 import { Block, ParallaxBlock } from "../../components/Block";
 import { Card } from "../../components/Card";
+import { HTimeLine } from "../../components/TimeLine";
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -22,6 +23,13 @@ export default function Album() {
             folks don&apos;t simply skip over it entirely.
           </Typography>
         </ParallaxBlock>
+        <Block style={{backgroundColor: "white"}}>
+          <Typography component="h1" variant="h2" align="center" gutterBottom>
+            Timeline
+          </Typography>
+          <HTimeLine />
+
+        </Block>
         <Block>
           <Grid container spacing={4}>
             {cards.map((card) => (
