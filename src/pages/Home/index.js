@@ -1,14 +1,19 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
+import {
+  Typography,
+  TextField,
+  Snackbar,
+  Button,
+  Grid,
+} from "@material-ui/core/";
 import { ParallaxBlock } from "../../components/Block";
 import { Block } from "../../components/Block";
-import { Button, Grid } from "@material-ui/core";
 import { Youtube } from "../../components/Youtube";
 import { Card } from "../../components/Card";
 
 import { TypingText } from "../../components/TypingText";
 import Categories from "./Categories";
-import CardOnCard from "./CardOnCard";
+import CardOnCard from "../../components/CardOnCard/CardOnCard";
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -128,7 +133,25 @@ const Home = () => {
       </Block>
       <Block>
         <Categories />
-        <CardOnCard />
+        <CardOnCard>
+          <Typography variant="h2" component="h2" gutterBottom>
+            Receive offers
+          </Typography>
+          <Typography variant="h5">
+            Taste the holidays of the everyday close to home.
+          </Typography>
+          <TextField
+            noBorder
+            placeholder="Your email"
+          />
+          <Button
+            type="submit"
+            color="primary"
+            variant="contained"
+          >
+            Keep me updated
+          </Button>
+        </CardOnCard>
       </Block>
       <Block>
         <Typography component="h1" variant="h2" align="center" gutterBottom>

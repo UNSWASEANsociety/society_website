@@ -6,6 +6,9 @@ import getWidth from "../../utils/getwidth";
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 
+import styles from "./Header.module.scss";
+import { Link } from "react-router-dom";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -36,12 +39,19 @@ const Header = ({ links }) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={styles.bar}>
         <nav>
           <Toolbar>
-            <CameraIcon />
+            <Link to="/">
+              <img src="/logo192.png" alt="UAS logo" className={styles.logo} />
+            </Link>
+            <Link to="/" className={styles.homeLink}>
+              <Typography variant="h6" className={classes.title}>
+                UNSW ASEAN Society
+              </Typography>
+            </Link>
             <Typography variant="h6" className={classes.title}>
-              Blog name
+              {/* UNSW */}
             </Typography>
             {/* <Button color="inherit">Login</Button> */}
             {width >= 600 ? (
@@ -53,18 +63,6 @@ const Header = ({ links }) => {
         </nav>
       </AppBar>
     </div>
-
-    // <AppBar position="static">
-    //   {/* TODO Temporarily using inline styling to fix colour */}
-    //   <Toolbar>
-    //     <CameraIcon />
-    //     {/* <CameraIcon className={classes.icon} /> */}
-    //     <Typography variant="h6" color="inherit" noWrap>
-    //       Blog name
-    //     </Typography>
-    //     {width >= 600 ? <Menu links={links}/> : <MobileMenu links={links} />}
-    //   </Toolbar>
-    // </AppBar>
   );
 };
 

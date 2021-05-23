@@ -15,7 +15,7 @@ export default function Album() {
       <main>
         <ParallaxBlock>
           <Typography component="h1" variant="h2" align="center" gutterBottom>
-            Album layout
+            Events
           </Typography>
           <Typography variant="h5" align="center" paragraph>
             Something short and leading about the collection below—its contents,

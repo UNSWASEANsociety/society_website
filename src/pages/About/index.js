@@ -2,10 +2,12 @@ import Typography from "@material-ui/core/Typography";
 import React from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import { Grid } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import { Block, ParallaxBlock } from "../../components/Block";
 import { Accordion } from "../../components/Accordion";
 import { TimeLine } from "../../components/TimeLine";
+
+import { CardOnCard } from "../../components/CardOnCard";
 
 const TestCarousel = () => {
   return (
@@ -46,9 +48,6 @@ const About = () => {
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           About
         </Typography>
-        <Typography variant="h5" align="center" paragraph>
-          This is decent
-        </Typography>
       </ParallaxBlock>
       {/* <TestCarousel /> */}
       <Block>
@@ -57,7 +56,50 @@ const About = () => {
         </Typography>
         <TestCarousel />
       </Block>
-      {/* TODO Remove!!!!  */}
+      <Block>
+        <CardOnCard>
+          <Typography component="h2" variant="h3" gutterBottom>
+            About ASEAN…
+          </Typography>
+          <Typography variant="h6" paragraph>
+            The Association of Southeast Asian Nations, or ASEAN, was
+            established on 8 August 1967 in Bangkok, Thailand, with the signing
+            of the ASEAN Declaration (Bangkok Declaration) by the Founding
+            Fathers of ASEAN, namely Indonesia, Malaysia, Philippines, Singapore
+            and Thailand. Brunei Darussalam then joined on 7 January 1984,
+            Vietnam on 28 July 1995, Lao PDR and Myanmar on 23 July 1997, and
+            Cambodia on 30 April 1999, making up what is today the ten Member
+            States of ASEAN.
+          </Typography>
+          <Button variant="outlined" href="https://asean.org/">
+            Learn More...
+          </Button>
+        </CardOnCard>
+      </Block>
+      <Block>
+        <Grid container>
+          <Grid item md={5}>
+            <Typography component="h2" variant="h3" gutterBottom>
+              ASEAN Community
+            </Typography>
+          </Grid>
+          <Grid item md={7}>
+            <Typography variant="h6" paragraph>
+              The ASEAN Vision 2020, adopted by the ASEAN Leaders on the 30th
+              Anniversary of ASEAN, agreed on a shared vision of ASEAN as a
+              concert of Southeast Asian nations, outward looking, living in
+              peace, stability and prosperity, bonded together in partnership in
+              dynamic development and in a community of caring societies. At the
+              9th ASEAN Summit in 2003, the ASEAN Leaders resolved to establish
+              an ASEAN Community. At the 12th ASEAN Summit in January 2007,
+              leaders affirmed their strong commitment to accelerate the
+              establishment of an ASEAN Community by 2015 and signed the Cebu
+              Declaration on the Acceleration of the Establishment of an ASEAN
+              Community by 2015.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Block>
       <Block>
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           The Three ASEAN Pillars…

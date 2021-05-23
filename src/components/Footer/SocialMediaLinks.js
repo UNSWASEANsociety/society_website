@@ -27,7 +27,7 @@ const socialMedias = [
   {
     component: <LinkedInIcon />,
     highlightMsg: "Follow us on linkedin",
-    path: "https://www.linkedin.com/company/unsw-asean-conference/",
+    path: "https://www.linkedin.com/company/unsw-asean-society/",
   },
   {
     component: <InstagramIcon />,
