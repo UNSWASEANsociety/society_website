@@ -58,25 +58,15 @@ const styles = (theme) => ({
 
 function CardOnCard(props) {
   const { classes, image, children } = props;
-  const [open, setOpen] = React.useState(false);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   return (
     <Container className={classes.root} component="section">
       <Grid container>
         <Grid item xs={12} md={6} className={classes.cardWrapper}>
           <div className={classes.card}>
-            <form onSubmit={handleSubmit} className={classes.cardContent}>
+            <div className={classes.cardContent}>
               {children}
-            </form>
+            </div>
           </div>
         </Grid>
         <Grid item xs={12} md={6} className={classes.imagesWrapper}>
@@ -86,11 +76,6 @@ function CardOnCard(props) {
           </Hidden>
         </Grid>
       </Grid>
-      <Snackbar
-        open={open}
-        onClose={handleClose}
-        message="We will send you our best offers, once a week."
-      />
     </Container>
   );
 }

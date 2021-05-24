@@ -38,8 +38,8 @@ const Header = ({ links }) => {
   }, []);
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" className={styles.bar}>
+    <div className={`${classes.root} ${styles.bar}`}>
+      <AppBar position="static" style={{backgroundColor: "#414042"}}>
         <nav>
           <Toolbar>
             <Link to="/">

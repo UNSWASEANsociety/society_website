@@ -1,13 +1,13 @@
 import React from "react";
 import About from "../pages/About";
 import Home from "../pages/Home";
-import { Team } from "../pages/Team";
+import Team from "../pages/Team";
 import Article from "../pages/Article";
-import { Events } from "../pages/Events";
+import Events from "../pages/Events";
 
 const routes = [
   { name: "Home", path: "/", component: <Home /> },
-  { name: "About", path: "/about", component: <About /> },
+  { name: "About ASEAN", path: "/about", component: <About /> },
   { name: "Our Team", path: "/team", component: <Team /> },
   { name: "Events", path: "/events", component: <Events /> },
   { name: "", path: "/article/:id", component: <Article /> },

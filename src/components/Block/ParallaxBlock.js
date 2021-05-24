@@ -9,6 +9,7 @@ const insideStyles = {
   position: "absolute",
   top: "50%",
   left: "50%",
+  width: "75%",
   transform: "translate(-50%,-50%)",
 };
 
@@ -37,8 +38,8 @@ const ParallaxBlock = ({ image, height, width, children }) => {
 ParallaxBlock.defaultProps = {
   image:
     "https://images.unsplash.com/photo-1503788311183-fa3bf9c4bc32?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-  height: "95vh",
-  width: "lg",
+  height: "75vh",
+  width: "xl",
 };
 
 export default ParallaxBlock;

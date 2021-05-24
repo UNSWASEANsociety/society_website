@@ -20,6 +20,12 @@ const HT = () => {
   return (
     <div style={{ width: "80%", height: "100px", margin: "0 auto" }}>
       <HorizontalTimeline
+      
+        styles={{
+          background: "#f8f8f8",
+          foreground: "#7b9d6f",
+          outline: "#dfdfdf",
+        }}
         index={value}
         indexClick={(index) => {
           //   setPrevious(value);

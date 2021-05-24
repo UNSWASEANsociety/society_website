@@ -9,6 +9,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MUICard from "@material-ui/core/Card";
 
+import styles from "./Card.module.scss";
+
 const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
@@ -41,31 +43,28 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Card = ({image, children}) => {
+const Card = ({ image, to, children }) => {
   const classes = useStyles();
+  const card = (
+    <MUICard className={classes.card}>
+      <CardMedia
+        className={classes.cardMedia}
+        image={image}
+        title="Image title"
+      />
+      <CardContent className={classes.cardContent}>{children}</CardContent>
+    </MUICard>
+  );
 
   return (
     <Grid item xs={12} sm={6} md={4}>
-      <MUICard className={classes.card}>
-        <CardMedia
-          className={classes.cardMedia}
-          image={image}
-          title="Image title"
-        />
-        <CardContent className={classes.cardContent}>
-         {children}
-        </CardContent>
-        <CardActions>
-          <Link to="/article/5">
-            <Button size="small" color="primary">
-              View
-            </Button>
-          </Link>
-          <Button size="small" color="primary">
-            Edit
-          </Button>
-        </CardActions>
-      </MUICard>
+      {to ? (
+        <Link to={to} className={styles.link}>
+          {card}
+        </Link>
+      ) : (
+        card
+      )}
     </Grid>
   );
 };
