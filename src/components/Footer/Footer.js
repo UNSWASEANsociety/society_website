@@ -10,9 +10,9 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
       <Link color="inherit" href="/">
-        Your Website
+        UNSW ASEAN SOCIETY
       </Link>{" "}
-      {new Date().getFullYear()}
+      {new Date().getFullYear()} - All rights reserved
       {"."}
     </Typography>
   );
@@ -32,7 +32,7 @@ const Footer = () => {
     <>
       <footer className={classes.footer}>
         <Fade bottom>
-          <Typography variant="h6" align="center" gutterBottom>
+          {/* <Typography variant="h6" align="center" gutterBottom>
             Footer
           </Typography>
           <Typography
@@ -42,9 +42,9 @@ const Footer = () => {
             component="p"
           >
             Something here to give the footer a purpose!
-          </Typography>
-          <SocialMediaLinks />
+          </Typography> */}
           <Copyright />
+          <SocialMediaLinks />
         </Fade>
       </footer>
     </>
