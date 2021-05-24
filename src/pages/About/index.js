@@ -1,5 +1,5 @@
 import Typography from "@material-ui/core/Typography";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import { Button, Grid } from "@material-ui/core";
@@ -8,42 +8,12 @@ import { Accordion } from "../../components/Accordion";
 import { TimeLine } from "../../components/TimeLine";
 
 import { CardOnCard } from "../../components/CardOnCard";
-
-const TestCarousel = () => {
-  return (
-    <AwesomeSlider>
-      <div
-        style={{
-          height: "100%",
-          width: "100%",
-          backgroundImage: 'url("https://source.unsplash.com/random")',
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        1
-      </div>
-      <div
-        style={{
-          height: "100%",
-          width: "100%",
-          backgroundImage: 'url("https://source.unsplash.com/random")',
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        2
-      </div>
-    </AwesomeSlider>
-  );
-};
+import { AutoCarousel } from "../../components/Carousel";
 
 const About = () => {
   return (
     <>
-      <ParallaxBlock
-        image="https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-      >
+      <ParallaxBlock image="https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           We believe in everything ASEAN…
         </Typography>
@@ -53,9 +23,8 @@ const About = () => {
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           One Vision. One Identity. One Community.
         </Typography>
-      </Block>
-      <Block>
-        <TestCarousel />
+        idea: Use caroursel to rotate between the 3 items
+        <AutoCarousel />
       </Block>
       <Block>
         <CardOnCard image="https://images.squarespace-cdn.com/content/v1/5eba756bbb839b7b67d0b667/1589800399092-85P5QO8IG91A062FTEJ4/ke17ZwdGBToddI8pDm48kFQQgP34qnCpeHaeAOzTt7pZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIedjZT6_OBzi2ofH1EqNdNeCRxNMlbxs9807lIebBlcA/flags.png?format=750w">
