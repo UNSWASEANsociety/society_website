@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Team from "../pages/Team";
 import Article from "../pages/Article";
 import Events from "../pages/Events";
+import TestPage from "../pages/TestPage";
 
 const routes = [
   { name: "Home", path: "/", component: <Home /> },
@@ -11,6 +12,7 @@ const routes = [
   { name: "Our Team", path: "/team", component: <Team /> },
   { name: "Events", path: "/events", component: <Events /> },
   { name: "", path: "/article/:id", component: <Article /> },
+  { name: "", path: "/testpage", component: <TestPage/> },
   // { name: "Contact Us", path: "/contact-us", component: <Teams /> },
   // { name: "Privacy Policy", path: "/privacy-policy", component: <Teams /> },
   // { name: "FAQ", path: "/faq", component: <Teams /> },

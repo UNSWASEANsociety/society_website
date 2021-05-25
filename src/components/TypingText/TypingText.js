@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const TypingText = ({text, speed, typePrompt}) => {
+const TypingText = ({ text, speed, typePrompt }) => {
   const [title, setTitle] = useState("");
 
+  // Set finished to true to stop interval
   const [intervalStatus, setIntervalStatus] = useState({
     intervalNum: -1,
     finished: false,
@@ -11,6 +12,7 @@ const TypingText = ({text, speed, typePrompt}) => {
 
   useEffect(() => {
     function* titleGenerator() {
+      // Generator which returns one character of the text at a time
       const title = text;
       let i = 0;
       for (; i < title.length; i++) yield title[i];
@@ -19,10 +21,14 @@ const TypingText = ({text, speed, typePrompt}) => {
 
     const writeTitle = () => {
       const nextLetter = titleGen.next();
+
+      // Enters if statement when text is all typed out
       if (nextLetter.done) {
         setTitle((prevTitle) => {
           return prevTitle + " ";
         });
+
+        // stop interval after finsihed typing out
         setIntervalStatus((prevStatus) => {
           const newStatus = { ...prevStatus, finished: true };
           return newStatus;
@@ -34,12 +40,16 @@ const TypingText = ({text, speed, typePrompt}) => {
       });
     };
 
-    const milliseconds = speed;
-    const intervalNum = setInterval(writeTitle, milliseconds);
+    const intervalNum = setInterval(writeTitle, speed);
+
+    // Save the returned output of setInterval so that the interval could 
+    // be cleared outside current scope 
     setIntervalStatus((prevStatus) => {
       const newStatus = { ...prevStatus, intervalNum: intervalNum };
       return newStatus;
     });
+
+    // cleanup function
     return () => {
       clearInterval(intervalNum);
     };
@@ -50,18 +60,19 @@ const TypingText = ({text, speed, typePrompt}) => {
   }
 
   return (
-      <>
-      {title}{typePrompt}
-      </>
+    <>
+      {title}
+      {typePrompt}
+    </>
   );
 };
 
 TypingText.defaultProps = {
-    text: "Text"
-}
+  text: "Text",
+};
 
 TypingText.propTypes = {
-    text: PropTypes.string
-}
+  text: PropTypes.string,
+};
 
 export default TypingText;
