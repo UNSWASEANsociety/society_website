@@ -18,13 +18,12 @@ import Values from "./Values";
 import Purpose from "./Purpose";
 import About from "./About";
 import MissionVision from "./Mission_Vision";
+import { AutoCarousel } from "../../components/Carousel";
 
 const Home = () => {
   return (
     <>
-      <ParallaxBlock
-        image="https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-      >
+      <ParallaxBlock image="https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           <TypingText
             text="Welcome to UNSW ASEAN Society"
@@ -33,17 +32,35 @@ const Home = () => {
           />
         </Typography>
       </ParallaxBlock>
+
       <Block>
         <About />
       </Block>
-      <Block>
+      <Block backgroundColor="white">
         <MissionVision />
       </Block>
       <Block>
         <Purpose />
       </Block>
-      <Block>
+      <Block backgroundColor="white">
         <Values />
+      </Block>
+      <Block>
+        <Typography component="h1" variant="h2" align="center" gutterBottom>
+          Event highlights
+        </Typography>
+        <AutoCarousel
+          items={[
+            {
+              image: "https://source.unsplash.com/random",
+              text: "Test 1",
+            },
+            {
+              image: "https://source.unsplash.com/random",
+              text: "Test 2",
+            },
+          ]}
+        ></AutoCarousel>
       </Block>
     </>
   );

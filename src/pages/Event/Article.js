@@ -51,7 +51,10 @@ const Article = () => {
           Article
         </Typography>
       </ParallaxBlock>
-      <Block style={{ backgroundColor: "white" }}>
+      <Block>
+        Info
+      </Block>
+      <Block backgroundColor="white">
         <Grid container>
           <Grid item md={4}>
             <img

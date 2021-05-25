@@ -1,8 +1,10 @@
+import { Container } from "@material-ui/core";
 import Link from "@material-ui/core/Link";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 import Fade from "react-reveal/Fade";
+import Links from "./Links";
 import SocialMediaLinks from "./SocialMediaLinks";
 
 function Copyright() {
@@ -21,7 +23,7 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
+    padding: theme.spacing(4),
   },
 }));
 
@@ -31,21 +33,13 @@ const Footer = () => {
   return (
     <>
       <footer className={classes.footer}>
-        <Fade bottom>
-          <Typography variant="h6" align="center" gutterBottom>
-            Footer
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            color="textSecondary"
-            component="p"
-          >
-            Something here to give the footer a purpose!
-          </Typography>
-          <Copyright />
-          <SocialMediaLinks />
-        </Fade>
+        <Container>
+          <Fade bottom>
+            <Links />
+            <Copyright />
+            <SocialMediaLinks />
+          </Fade>
+        </Container>
       </footer>
     </>
   );

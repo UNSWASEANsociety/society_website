@@ -1,0 +1,12 @@
+.linkGroup {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.link {
+    // text-decoration: none;
+    color: inherit;
+    padding: 0 0.75rem;
+}

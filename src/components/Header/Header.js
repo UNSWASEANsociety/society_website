@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = ({ links }) => {
   const classes = useStyles();
-
+  
   const [width, setWidth] = useState(getWidth());
   useEffect(() => {
     const changeWidth = () => {
@@ -36,6 +36,10 @@ const Header = ({ links }) => {
       window.removeEventListener("resize", changeWidth, true);
     };
   }, []);
+
+  const visibleLinks = links.filter((link) => {
+    return link.onHeader
+  })
 
   return (
     <div className={`${classes.root} ${styles.bar}`}>
@@ -55,9 +59,9 @@ const Header = ({ links }) => {
             </Typography>
             {/* <Button color="inherit">Login</Button> */}
             {width >= 600 ? (
-              <Menu links={links} />
+              <Menu links={visibleLinks} />
             ) : (
-              <MobileMenu links={links} />
+              <MobileMenu links={visibleLinks} />
             )}
           </Toolbar>
         </nav>

@@ -4,10 +4,10 @@ import { Container } from "@material-ui/core";
 
 import { Fade } from "react-reveal";
 
-const Block = ({ style = null, children }) => {
+const Block = ({ style = null, backgroundColor, children }) => {
   return (
     <>
-      <section className={styles.root} style={style}>
+      <section className={styles.root} style={{ backgroundColor, ...style }}>
         <Container>
           <Fade bottom>
             <div className={styles.innerContent}>{children}</div>

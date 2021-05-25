@@ -18,7 +18,7 @@ export default function Events() {
           </Typography>
           <HTimeLine />
         </ParallaxBlock>
-        <Block style={{ backgroundColor: "white" }}>
+        <Block backgroundColor="#C2DBE2">
             TODO: Some search fields here
         </Block>
         <Block>

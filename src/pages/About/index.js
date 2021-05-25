@@ -13,6 +13,7 @@ import Ones from "./Ones";
 import AboutASEAN from "./AboutASEAN";
 import ASEANPillars from "./ASEANPillars";
 import ASEANCommunity from "./ASEANCommunity";
+import { Youtube } from "../../components/Youtube";
 
 const About = () => {
   return (
@@ -28,6 +29,13 @@ const About = () => {
       </Block>
       <Block>
         <AboutASEAN />
+      </Block>
+      <Block>
+        <Typography component="h1" variant="h2" align="center" gutterBottom>
+          What is ASEAN?
+        </Typography>
+        <Youtube videoId="VDTdXDDzJ1k" />
+
       </Block>
       <Block>
         <ASEANCommunity />
