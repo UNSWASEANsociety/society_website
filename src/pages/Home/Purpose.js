@@ -39,7 +39,7 @@ const Purpose = () => {
           {items.map((item) => {
             return (
               <li className={styles.item}>
-                <Typography variant="h2" className={styles.headline} paragraph>
+                <Typography variant="h3" className={styles.headline} paragraph>
                   {item.heading}
                 </Typography>
                 <Typography variant="h5" paragraph>

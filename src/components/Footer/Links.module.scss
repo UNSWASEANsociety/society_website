@@ -1,8 +1,10 @@
 .linkGroup {
+    padding: 0 0;
     display: flex;
     list-style-type: none;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .link {

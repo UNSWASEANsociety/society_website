@@ -9,7 +9,7 @@ const Mission_Vision = () => {
           <Typography component="h1" variant="h2" align="center" gutterBottom>
             Mission
           </Typography>
-          <Typography variant="h5" paragraph>
+          <Typography variant="h5"  align="center" paragraph>
             To become one of the global leads on youth empowerment for social
             impact in ASEAN and Indo-Pacific.
           </Typography>
@@ -19,7 +19,7 @@ const Mission_Vision = () => {
           <Typography component="h1" variant="h2" align="center" gutterBottom>
             Vision
           </Typography>
-          <Typography variant="h5" paragraph>
+          <Typography variant="h5"  align="center" paragraph>
             Enabling Growth. Unleashing Potential.
           </Typography>
         </Grid>
