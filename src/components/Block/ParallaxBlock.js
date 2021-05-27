@@ -2,22 +2,14 @@ import Container from "@material-ui/core/Container";
 import React from "react";
 import { Parallax } from "react-parallax";
 
-const insideStyles = {
-  // background: "white",
-  color: "white",
-  padding: 20,
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  width: "75%",
-  transform: "translate(-50%,-50%)",
-};
+import styles from "./ParallaxBlock.module.scss"
 
-const ParallaxBlock = ({ image, height, width, children }) => {
+const ParallaxBlock = ({ image, height, width, hasNotch, children }) => {
+  console.log("has notch=>", hasNotch && styles.notch)
   return (
-    <Parallax bgImage={image} strength={500}>
+    <Parallax bgImage={image} strength={500} className={hasNotch && styles.notch}>
       <div style={{ height }}>
-        <div style={insideStyles}>
+        <div className={styles.inner}>
           <Container maxWidth={width}>
             {/* <Typography component="h1" variant="h2" align="center" gutterBottom>
               Album layout

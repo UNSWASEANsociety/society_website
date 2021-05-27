@@ -7,7 +7,7 @@ import { Fade } from "react-reveal";
 const Block = ({ style = null, backgroundColor, children }) => {
   return (
     <>
-      <section className={styles.root} style={{ backgroundColor, ...style }}>
+      <section style={{ backgroundColor, ...style }}>
         <Container>
           <Fade bottom>
             <div className={styles.innerContent}>{children}</div>

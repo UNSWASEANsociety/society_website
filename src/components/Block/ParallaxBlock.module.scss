@@ -1,0 +1,33 @@
+.inner {
+  color: white;
+  padding: 20;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+}
+
+// Like the iphone notch
+.notch {
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    53% 100%,
+    52% 98%,
+    48% 98%,
+    47% 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    53% 100%,
+    52% 98%,
+    48% 98%,
+    47% 100%,
+    0 100%
+  );
+}
