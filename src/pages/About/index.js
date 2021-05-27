@@ -18,7 +18,7 @@ import { Youtube } from "../../components/Youtube";
 const About = () => {
   return (
     <>
-      <ParallaxBlock image="https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+      <ParallaxBlock>
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           We believe in everything ASEAN…
         </Typography>
@@ -35,7 +35,6 @@ const About = () => {
           What is ASEAN?
         </Typography>
         <Youtube videoId="VDTdXDDzJ1k" />
-
       </Block>
       <Block>
         <ASEANCommunity />

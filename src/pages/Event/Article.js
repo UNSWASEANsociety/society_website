@@ -12,6 +12,12 @@ import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
+
+import EventIcon from "@material-ui/icons/Event";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import PersonIcon from "@material-ui/icons/Person";
+
 const cards = [1, 2, 3];
 
 function TabPanel(props) {
@@ -43,7 +49,10 @@ const Article = () => {
 
   return (
     <>
-      <ParallaxBlock hasNotch={true} image="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+      <ParallaxBlock
+        hasNotch={true}
+        image="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      >
         <Typography component="h6" align="center" gutterBottom>
           15/5/2021
         </Typography>
@@ -52,18 +61,63 @@ const Article = () => {
         </Typography>
       </ParallaxBlock>
       <Block>
-        Info
+        <Grid container>
+          <Grid item md={3}>
+          <EventIcon fontSize="large" />
+      
+            <Typography component="h2" variant="h5">
+              Date
+            </Typography>
+            <Typography component="h4" paragraph>
+              15 - 16 April 2021
+            </Typography>
+          </Grid>
+          <Grid item md={3}>
+            <LocationOnIcon fontSize="large" />
+            <Typography component="h2" variant="h5">
+              Location
+            </Typography>
+            <Typography component="h4" paragraph>
+              Zoom
+            </Typography>
+          </Grid>
+          <Grid item md={3}>
+            <AttachMoneyIcon fontSize="large" />
+            <Typography component="h2" variant="h5">
+              Price
+            </Typography>
+            <Typography component="h4" paragraph>
+              Free
+            </Typography>
+          </Grid>
+          <Grid item md={3}>
+            <PersonIcon fontSize="large" />
+            <Typography component="h2" variant="h5">
+              Speaker
+            </Typography>
+            <Typography component="h4" paragraph>
+              Someone and guests
+            </Typography>
+          </Grid>
+        </Grid>
       </Block>
       <Block backgroundColor="white">
         <Grid container>
-          <Grid item md={4}>
-            <img
-              src="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              alt="img"
-              width="100%"
-            />
+          <Grid item md={6}>
+            <Typography component="h2" variant="h3">
+              Description
+            </Typography>
+            <Typography variant="h5" paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse in risus id tortor euismod elementum. Mauris vitae
+              sollicitudin dolor. Phasellus ac magna ultricies, viverra justo
+              nec, cursus elit. Sed ac egestas odio. Maecenas ullamcorper elit
+              in orci porttitor, fringilla cursus nibh pulvinar. Quisque gravida
+              facilisis iaculis. Sed dictum at turpis at luctus. Aenean in mi
+              lorem. Proin ultricies felis quis consectetur finibus. Aenean nec
+              consequat risus, pulvinar commodo
+            </Typography>
           </Grid>
-          <Grid item md={2}/>
           <Grid item md={6}>
             <Paper square>
               <Tabs
@@ -73,9 +127,9 @@ const Article = () => {
                 onChange={handleChange}
                 aria-label="disabled tabs example"
               >
-                <Tab label="Active" />
-                <Tab label="2" />
-                <Tab label="Active" />
+                <Tab label="Day 1" />
+                <Tab label="Day 2" />
+                <Tab label="Day 3" />
               </Tabs>
               <TabPanel value={value} index={0}>
                 Item One
@@ -89,15 +143,6 @@ const Article = () => {
             </Paper>
           </Grid>
         </Grid>
-        <Typography variant="h5" paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          in risus id tortor euismod elementum. Mauris vitae sollicitudin dolor.
-          Phasellus ac magna ultricies, viverra justo nec, cursus elit. Sed ac
-          egestas odio. Maecenas ullamcorper elit in orci porttitor, fringilla
-          cursus nibh pulvinar. Quisque gravida facilisis iaculis. Sed dictum at
-          turpis at luctus. Aenean in mi lorem. Proin ultricies felis quis
-          consectetur finibus. Aenean nec consequat risus, pulvinar commodo
-        </Typography>
       </Block>
 
       <Block>

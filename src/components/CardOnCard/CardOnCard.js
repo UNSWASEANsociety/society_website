@@ -1,10 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
-import Container from "@material-ui/core/Container";
-import { Typography, TextField, Snackbar, Button } from "@material-ui/core/";
+import { withStyles } from "@material-ui/core/styles";
+import PropTypes from "prop-types";
+import React from "react";
 
 const styles = (theme) => ({
   root: {
@@ -19,16 +18,12 @@ const styles = (theme) => ({
     display: "flex",
     justifyContent: "center",
     backgroundColor: "#FFC956",
+    color: "black",
     padding: theme.spacing(8, 3),
   },
   cardContent: {
     maxWidth: 400,
     minHeight: 170,
-  },
-  textField: {
-    width: "100%",
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(2),
   },
   button: {
     width: "100%",
@@ -36,19 +31,10 @@ const styles = (theme) => ({
   imagesWrapper: {
     position: "relative",
   },
-  imageDots: {
-    position: "absolute",
-    top: -67,
-    left: -67,
-    right: 0,
-    bottom: 0,
-    width: "100%",
-    background: "url(/static/onepirate/productCTAImageDots.png)",
-  },
   image: {
     position: "absolute",
     top: -28,
-    left: -28,
+    left: -100,
     right: 0,
     bottom: 0,
     width: "100%",
@@ -72,7 +58,7 @@ function CardOnCard(props) {
         <Grid item xs={12} md={6} className={classes.imagesWrapper}>
           <Hidden smDown>
             <div className={classes.imageDots} />
-            <img src={image} alt="Image" className={classes.image} />
+            <img src={image} alt="image" className={classes.image} />
           </Hidden>
         </Grid>
       </Grid>

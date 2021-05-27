@@ -1,29 +1,20 @@
-import React, { useEffect, useState } from "react";
 import {
-  Typography,
-  TextField,
-  Snackbar,
-  Button,
-  Grid,
+  Typography
 } from "@material-ui/core/";
-import { ParallaxBlock } from "../../components/Block";
-import { Block } from "../../components/Block";
-import { Youtube } from "../../components/Youtube";
-import { Card } from "../../components/Card";
-
+import React from "react";
+import { Block, ParallaxBlock } from "../../components/Block";
+import { AutoCarousel } from "../../components/Carousel";
 import { TypingText } from "../../components/TypingText";
-import AsortedList from "../../components/AsortedList/AsortedList";
-import CardOnCard from "../../components/CardOnCard/CardOnCard";
-import Values from "./Values";
-import Purpose from "./Purpose";
 import About from "./About";
 import MissionVision from "./Mission_Vision";
-import { AutoCarousel } from "../../components/Carousel";
+import Purpose from "./Purpose";
+import Values from "./Values";
+
 
 const Home = () => {
   return (
     <>
-      <ParallaxBlock image="https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+      <ParallaxBlock >
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           <TypingText
             text="Welcome to UNSW ASEAN Society"
@@ -52,12 +43,12 @@ const Home = () => {
         <AutoCarousel
           items={[
             {
-              image: "https://source.unsplash.com/random",
-              text: "Test 1",
+              image: "https://s3-alpha-sig.figma.com/img/6b36/c94f/ad4aa6d21bd5c58cb8b32b30edffa5e1?Expires=1623024000&Signature=XiwRQxZmbpqMo-DwiEvpQWEg8DCpcd~l1S3RvDSRFH6eRFLgkdJbl5ylVwv27pfD0OrdCgq5WGYRZuu~vUU~XJvhjYAf8fwa8J2WL3~nA0PmEwEmHhk9nXHL5CPjfKvpNv6kcv~r9NCwwHTnEwsoTtb4hqchLqnSp~hVAAHEvDiwhWMvLuJhsSmBhd7~nhbB3lgfJ1xJ8q9DmXx6LsIQcl-DdJ1LkyY6PsqMoXziSdGgP~41xDFEM7bHZxRd2XoBqXfBqiJxBqbishcJAAqLAcp4UJv9YHEaJSQs2151LuURCzRHjOXFVGWFWpOTxtZ-XLz6I6xJKLSmM7fQFZRdWg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+              text: "Event 1",
             },
             {
-              image: "https://source.unsplash.com/random",
-              text: "Test 2",
+              image: "https://s3-alpha-sig.figma.com/img/6b36/c94f/ad4aa6d21bd5c58cb8b32b30edffa5e1?Expires=1623024000&Signature=XiwRQxZmbpqMo-DwiEvpQWEg8DCpcd~l1S3RvDSRFH6eRFLgkdJbl5ylVwv27pfD0OrdCgq5WGYRZuu~vUU~XJvhjYAf8fwa8J2WL3~nA0PmEwEmHhk9nXHL5CPjfKvpNv6kcv~r9NCwwHTnEwsoTtb4hqchLqnSp~hVAAHEvDiwhWMvLuJhsSmBhd7~nhbB3lgfJ1xJ8q9DmXx6LsIQcl-DdJ1LkyY6PsqMoXziSdGgP~41xDFEM7bHZxRd2XoBqXfBqiJxBqbishcJAAqLAcp4UJv9YHEaJSQs2151LuURCzRHjOXFVGWFWpOTxtZ-XLz6I6xJKLSmM7fQFZRdWg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+              text: "Event 2",
             },
           ]}
         ></AutoCarousel>

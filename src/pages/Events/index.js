@@ -1,3 +1,4 @@
+import { Hidden } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
@@ -10,18 +11,18 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export default function Events() {
   return (
-    <React.Fragment>
+    <>
       <main>
         <ParallaxBlock height="50vh" width="xl">
           <Typography component="h1" variant="h2" align="center" gutterBottom>
-            Event Timeline
+            Events<Hidden mdDown> Timeline</Hidden>
           </Typography>
-          <HTimeLine />
+          <Hidden mdDown>
+            <HTimeLine />
+          </Hidden>
         </ParallaxBlock>
-        <Block backgroundColor="#C2DBE2">
-            TODO: Some search fields here
-        </Block>
         <Block>
+
           <Grid container spacing={4}>
             {cards.map((card) => (
               <Card to="/article/5" image="https://source.unsplash.com/random">
@@ -37,6 +38,6 @@ export default function Events() {
           </Grid>
         </Block>
       </main>
-    </React.Fragment>
+    </>
   );
 }

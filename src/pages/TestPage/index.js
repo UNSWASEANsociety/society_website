@@ -4,7 +4,7 @@ import React from "react";
 import "react-awesome-slider/dist/styles.css";
 import { Accordion } from "../../components/Accordion";
 import { AsortedList } from "../../components/AsortedList";
-import { Block } from "../../components/Block";
+import { Block, VideoBlock } from "../../components/Block";
 import { TimeLine } from "../../components/TimeLine";
 import { Youtube } from "../../components/Youtube";
 
@@ -12,6 +12,7 @@ import { Youtube } from "../../components/Youtube";
 const TestPage = () => {
   return (
     <>
+      <VideoBlock/>
       <Block>
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           Some accordion
