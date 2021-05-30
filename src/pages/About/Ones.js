@@ -8,8 +8,8 @@ const Ones = () => {
       <Typography component="h1" variant="h2" align="center" gutterBottom>
         One Vision. One Identity. One Community.
       </Typography>
-      idea: Use caroursel to rotate between the 3 items
-      <AutoCarousel />
+      {/* idea: Use caroursel to rotate between the 3 items
+      <AutoCarousel /> */}
     </>
   );
 };

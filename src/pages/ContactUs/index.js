@@ -35,7 +35,7 @@ const ContactUs = () => {
             </Typography>
           </Grid>
           <Grid item md={6}>
-            <form>Put email form here</form>
+            {/* <form>Put email form here</form> */}
           </Grid>
         </Grid>
       </Block>

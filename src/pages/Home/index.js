@@ -36,7 +36,7 @@ const Home = () => {
       <Block backgroundColor="white">
         <Values />
       </Block>
-      <Block>
+      {/* <Block>
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           Event highlights
         </Typography>
@@ -52,7 +52,7 @@ const Home = () => {
             },
           ]}
         ></AutoCarousel>
-      </Block>
+      </Block> */}
     </>
   );
 };

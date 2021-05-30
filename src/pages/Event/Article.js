@@ -18,7 +18,17 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import PersonIcon from "@material-ui/icons/Person";
 
-const cards = [1, 2, 3];
+import events from "../Events/events_data";
+
+const getEvent = (id) => {
+  return events.filter((event) => {
+    return event.id == id;
+  })[0];
+};
+
+const get3Events = () => {
+  return events.slice(0, 3);
+};
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,30 +56,34 @@ const Article = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  const selectedEvent = getEvent(id);
+  const events = get3Events();
   return (
     <>
       <ParallaxBlock
         hasNotch={true}
-        image="https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+        image="/seminar.png"
+        style={{
+          position: "absolute",
+          width: "1500px",
+          height: "722px",
+          left: "0px",
+          top: "32px",
+        }}
       >
-        <Typography component="h6" align="center" gutterBottom>
-          15/5/2021
-        </Typography>
         <Typography component="h1" variant="h2" align="center" gutterBottom>
-          Article
+          {selectedEvent.name}
         </Typography>
       </ParallaxBlock>
       <Block>
         <Grid container>
           <Grid item md={3}>
-          <EventIcon fontSize="large" />
-      
+            <EventIcon fontSize="large" />
             <Typography component="h2" variant="h5">
               Date
             </Typography>
             <Typography component="h4" paragraph>
-              15 - 16 April 2021
+              {selectedEvent.date}
             </Typography>
           </Grid>
           <Grid item md={3}>
@@ -78,7 +92,7 @@ const Article = () => {
               Location
             </Typography>
             <Typography component="h4" paragraph>
-              Zoom
+              {selectedEvent.location}
             </Typography>
           </Grid>
           <Grid item md={3}>
@@ -87,7 +101,7 @@ const Article = () => {
               Price
             </Typography>
             <Typography component="h4" paragraph>
-              Free
+              {selectedEvent.price}
             </Typography>
           </Grid>
           <Grid item md={3}>
@@ -96,7 +110,7 @@ const Article = () => {
               Speaker
             </Typography>
             <Typography component="h4" paragraph>
-              Someone and guests
+              Guests
             </Typography>
           </Grid>
         </Grid>
@@ -108,18 +122,11 @@ const Article = () => {
               Description
             </Typography>
             <Typography variant="h5" paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse in risus id tortor euismod elementum. Mauris vitae
-              sollicitudin dolor. Phasellus ac magna ultricies, viverra justo
-              nec, cursus elit. Sed ac egestas odio. Maecenas ullamcorper elit
-              in orci porttitor, fringilla cursus nibh pulvinar. Quisque gravida
-              facilisis iaculis. Sed dictum at turpis at luctus. Aenean in mi
-              lorem. Proin ultricies felis quis consectetur finibus. Aenean nec
-              consequat risus, pulvinar commodo
+              {selectedEvent.description}
             </Typography>
           </Grid>
           <Grid item md={6}>
-            <Paper square>
+            {/* <Paper square>
               <Tabs
                 value={value}
                 indicatorColor="primary"
@@ -140,7 +147,7 @@ const Article = () => {
               <TabPanel value={value} index={2}>
                 Item Three
               </TabPanel>
-            </Paper>
+            </Paper> */}
           </Grid>
         </Grid>
       </Block>
@@ -151,15 +158,12 @@ const Article = () => {
         </Typography>
         <Container maxWidth="lg">
           <Grid container spacing={4}>
-            {cards.map((card) => (
+            {events.map((event) => (
               <Card image="https://source.unsplash.com/random">
                 <Typography gutterBottom variant="h5" component="h2">
-                  Heading
+                  {event.name}
                 </Typography>
-                <Typography>
-                  This is a media card. You can use this section to describe the
-                  content.
-                </Typography>
+                <Typography>{event.date}</Typography>
               </Card>
             ))}
           </Grid>
