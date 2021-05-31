@@ -110,7 +110,7 @@ const Article = () => {
               Speaker
             </Typography>
             <Typography component="h4" paragraph>
-              Guests
+              {selectedEvent.speaker}
             </Typography>
           </Grid>
         </Grid>
