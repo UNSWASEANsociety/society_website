@@ -1,7 +1,7 @@
 const TeamList = [
     { category: "executive", role: "President", name: "Anthony Sunjaya" },
-    { category: "executive", role: "VP(Internal)", name: "Austin P. McDonald" },
-    { category: "executive", role: "VP(External)", name: "Danielle Worton" },
+    { category: "executive", role: "VP (Internal)", name: "Austin P. McDonald" },
+    { category: "executive", role: "VP (External)", name: "Danielle Worton" },
     { category: "executive", role: "Secretary", name: "Nur Farah Karim" },
     { category: "executive", role: "Treasurer", name: "Cathleen Lee" },
     { category: "executive", role: "Arc Delegate", name: "Camelia Husswan" },

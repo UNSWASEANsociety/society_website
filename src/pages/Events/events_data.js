@@ -2,6 +2,7 @@ const events = [
   {
     id: 1,
     name: "Young Entrepreneurs Case Competition",
+    image: "/seminar.png",
     date: "21 June 2021",
     location: "UNSW",
     price: "free",
@@ -15,4 +16,8 @@ const events = [
     }, 
 ];
 
-export default events;
+const getEvents = () => {
+  return events;
+}
+
+export default getEvents;

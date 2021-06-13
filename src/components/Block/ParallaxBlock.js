@@ -15,7 +15,6 @@ const ParallaxBlock = ({
   hasNotch,
   children,
 }) => {
-  console.log("has notch=>", hasNotch && styles.notch);
   return (
     <Parallax
       bgImage={image}

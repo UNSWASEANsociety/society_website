@@ -2,7 +2,7 @@ import React from "react";
 import About from "../pages/About";
 import Home from "../pages/Home";
 import Team from "../pages/Team";
-import Article from "../pages/Event";
+import Event from "../pages/Event";
 import Events from "../pages/Events";
 import TestPage from "../pages/TestPage";
 import ContactUs from "../pages/ContactUs";
@@ -39,8 +39,8 @@ const routes = [
   },
   {
     name: "",
-    path: "/article/:id",
-    component: <Article />,
+    path: "/event/:id",
+    component: <Event />,
     onHeader: false,
     onFooter: false,
   },

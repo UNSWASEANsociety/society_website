@@ -22,7 +22,6 @@ export default function Team() {
     const uniqTeams = new Set();
 
     // setTeam(getTeam());
-    console.log(team.filter((member) => member.category === "executive"));
     setExecs(team.filter((member) => member.category === "executive"));
     setDirectors(team.filter((member) => member.category === "directors"));
     setAssociates(
@@ -37,43 +36,30 @@ export default function Team() {
   }, []);
 
   // const uniqTeamsArr = Array.from(uniqTeams);
-  
+
   const memberCard = (member) => (
     <Card image="/team/default_profile.png">
-      <Typography
-        gutterBottom
-        variant="h5"
-        component="h2"
-        align="center"
-      >
+      <Typography gutterBottom variant="h5" component="h2" align="center">
         {member.name}
       </Typography>
-      <Typography
-        gutterBottom
-        variant="p"
-        component="h3"
-        align="center"
-      >
+      <Typography gutterBottom variant="p" component="h3" align="center">
         {member.role}
       </Typography>
-      <Typography
-        align="center"
-      >
-      <LinkedIn/>
+      <Typography align="center">
+        <LinkedIn />
       </Typography>
     </Card>
-  )
+  );
   const associateBlock = uniqTeamsArr.map((team) => {
-    console.log("team=> ", team);
     return (
       <Block>
         <Typography component="h2" variant="h3" align="center" gutterBottom>
           {team}
         </Typography>
+        
         <Grid container spacing={4}>
           {associates
             .filter((member) => {
-              console.log(member);
               return member.team === team;
             })
             .map(memberCard)}
@@ -92,29 +78,31 @@ export default function Team() {
           </Typography>
         </ParallaxBlock>
         <section style={{ padding: "2rem 0" }}>
-            <Block>
+          <Block>
             <Typography component="h1" variant="h2" align="center" gutterBottom>
               Execs
             </Typography>
+            
+
             <Grid container spacing={4}>
               {execs.map(memberCard)}
             </Grid>
-            </Block>
-            <Block backgroundColor="white">
-            
+          </Block>
+          <Block backgroundColor="white">
             <Typography component="h1" variant="h2" align="center" gutterBottom>
               Directors
             </Typography>
+            
             <Grid container spacing={4}>
               {directors.map(memberCard)}
             </Grid>
-            </Block>
-            {/* <Block>
+          </Block>
+          {/* <Block>
             <Typography component="h1" variant="h2" align="center" gutterBottom>
               Associates
             </Typography>
             </Block> */}
-            {associateBlock}
+          {associateBlock}
         </section>
       </main>
     </React.Fragment>

@@ -4,11 +4,7 @@ import React from "react";
 import { Block, ParallaxBlock } from "../../components/Block";
 import { Card } from "../../components/Card";
 
-import events from "./events_data"
-
-const getEvents = () => {
-  return events;
-}
+import getEvents from "./events_data"
 
 export default function Events() {
   const events = getEvents();
@@ -27,7 +23,7 @@ export default function Events() {
         <Block>
           <Grid container spacing={4}>
             {events.map((event) => (
-              <Card to={`/article/${event.id}`} image="https://source.unsplash.com/random" key={event.id}>
+              <Card to={`/event/${event.id}`} image={event.image} key={event.id}>
                 <Typography gutterBottom variant="h5" component="h2">
                   {event.name}
                 </Typography>
