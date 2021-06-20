@@ -7,6 +7,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import React from "react";
 
 const IconSummary = ({ date, location, price, speaker }) => {
+  console.log(speaker);
   return (
     <>
       <Grid container>
@@ -46,16 +47,13 @@ const IconSummary = ({ date, location, price, speaker }) => {
         <Grid item md={3} xs={6}>
           <Typography align="center">
             <PersonIcon fontSize="large" />
-            {speaker !== [] && (
-              <>
-                <Typography component="h2" variant="h5">
-                  Speaker
-                </Typography>
-                <Typography component="h4" paragraph>
-                  {speaker}
-                </Typography>
-              </>
-            )}
+
+            <Typography component="h2" variant="h5">
+              Speaker
+            </Typography>
+            <Typography component="h4" paragraph>
+              {speaker.length ? speaker.join(", ") : "None"}
+            </Typography>
           </Typography>
         </Grid>
       </Grid>

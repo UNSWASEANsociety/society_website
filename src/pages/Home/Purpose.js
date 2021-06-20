@@ -8,6 +8,8 @@ const Purpose = () => {
   // TODO extract to own component
   // Or use something else 
   const items = [
+    // subheading semi bold gill sans
+    // body is normal gill sans
     {
       heading: "Provide",
       text: "Provide a platform to promote multiculturalism and integrate Southeast Asian culture with the wider community",
@@ -28,8 +30,8 @@ const Purpose = () => {
 
   return (
     <>
-      <Typography component="h1" variant="h2" align="center" gutterBottom>
-        Purpose
+      <Typography   style={{color: "#FFC956"}} component="h1" variant="h2" align="center" gutterBottom>
+        PURPOSE
       </Typography>
       <hr />
       <br />

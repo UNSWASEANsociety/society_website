@@ -3,6 +3,7 @@ import React from "react";
 
 const ASEANPillars = () => {
   // TODO download images instead of using squarespace-cdn
+  // TODO align text
   return (
     <>
       <Typography component="h1" variant="h2" align="center" gutterBottom>
@@ -15,10 +16,10 @@ const ASEANPillars = () => {
             width="100%"
             alt="img"
           />
-          <Typography variant="h4" align="center" paragraph>
-            ASEAN Socio-Cultural Community
+          <Typography style={{color: "#F26A51"}} variant="h4" align="center" paragraph>
+            Socio-Cultural <br/>Community
           </Typography>
-          <Typography variant="h6" align="center" paragraph>
+          <Typography variant="h6" align="left" paragraph>
             At the heart of the ASEAN Socio-Cultural Community (ASCC) is the
             commitment to lift the quality of life of its peoples through
             cooperative activities that are people-oriented, people-centred,
@@ -33,10 +34,10 @@ const ASEANPillars = () => {
             width="100%"
             alt="img"
           />
-          <Typography variant="h4" align="center" paragraph>
-            ASEAN Economic Community
+          <Typography  style={{color: "#FFC956"}} variant="h4" align="center" paragraph>
+            Economic <br/> Community
           </Typography>
-          <Typography variant="h6" align="center" paragraph>
+          <Typography variant="h6" align="left" paragraph>
             The establishment of the ASEAN Economic Community (AEC) in 2015 is a
             major milestone in the regional economic integration agenda of
             ASEAN, offering opportunities in the form of a huge market of USD
@@ -49,10 +50,10 @@ const ASEANPillars = () => {
             width="100%"
             alt="img"
           />
-          <Typography variant="h4" align="center" paragraph>
-            ASEAN Political-Security Community
+          <Typography style={{color: "#89C765"}} variant="h4" align="center" paragraph>
+            Political-Security Community
           </Typography>
-          <Typography variant="h6" align="center" paragraph>
+          <Typography variant="h6" align="left" paragraph>
             To build on regional developments in the field of political and
             security cooperation, the ASEAN Leaders have agreed to establish the
             ASEAN Political- Security Community (APSC). The APSC aims to ensure

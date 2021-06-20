@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = () => {
   const classes = useStyles();
-
+  // TODO use logo wash-04.png at bottom of footer
   return (
     <>
       <footer className={classes.footer}>
@@ -39,8 +39,10 @@ const Footer = () => {
             <Links />
             <Copyright />
             <SocialMediaLinks />
+            <img src="/logo192.png" alt="society logo"/>
           </Fade>
         </Container>
+        
       </footer>
     </>
   );

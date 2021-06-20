@@ -6,14 +6,21 @@ import { Accordion } from "../../components/Accordion";
 import { AsortedList } from "../../components/AsortedList";
 import { Block, VideoBlock } from "../../components/Block";
 import { TimeLine } from "../../components/TimeLine";
+import { TypingEffect } from "../../components/TypingText";
 import { Youtube } from "../../components/Youtube";
-
 
 const TestPage = () => {
   return (
     <>
-      <VideoBlock/>
+      <VideoBlock>
+        <Typography component="h1" variant="h2" align="center" gutterBottom>
+          <TypingEffect />
+        </Typography>
+      </VideoBlock>
       <Block>
+        <Typography component="h1" variant="h2" align="center" gutterBottom>
+          <TypingEffect />
+        </Typography>
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           Some accordion
         </Typography>

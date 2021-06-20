@@ -50,13 +50,25 @@ export default function Team() {
       </Typography>
     </Card>
   );
-  const associateBlock = uniqTeamsArr.map((team) => {
-    return (
-      <Block>
-        <Typography component="h2" variant="h3" align="center" gutterBottom>
+
+  // Section of teams which includes all associates
+  const associateBlock = uniqTeamsArr.map((team, i) => {
+    // TODO Blue white blue white
+    console.log(team);
+    console.log(i);
+    const content = (
+      <>
+        <Typography
+          style={i % 2 === 1 ? { color: "#FFC956" } : null}
+          component="h2"
+          variant="h3"
+          align="center"
+          gutterBottom
+        >
+          {/** Make all team names uppercase */}
           {team}
         </Typography>
-        
+
         <Grid container spacing={4}>
           {associates
             .filter((member) => {
@@ -64,7 +76,16 @@ export default function Team() {
             })
             .map(memberCard)}
         </Grid>
-      </Block>
+      </>
+    );
+    return (
+      <>
+        {i % 2 === 1 ? (
+          <Block>{content}</Block>
+        ) : (
+          <Block backgroundColor="white">{content}</Block>
+        )}
+      </>
     );
   });
 
@@ -74,15 +95,20 @@ export default function Team() {
       <main>
         <ParallaxBlock>
           <Typography component="h1" variant="h2" align="center" gutterBottom>
-            Meet the team.
+            MEET THE TEAM
           </Typography>
         </ParallaxBlock>
         <section style={{ padding: "2rem 0" }}>
           <Block>
-            <Typography component="h1" variant="h2" align="center" gutterBottom>
-              Execs
+            <Typography
+              style={{ color: "#FFC956" }}
+              component="h1"
+              variant="h2"
+              align="center"
+              gutterBottom
+            >
+              Executives
             </Typography>
-            
 
             <Grid container spacing={4}>
               {execs.map(memberCard)}
@@ -92,7 +118,7 @@ export default function Team() {
             <Typography component="h1" variant="h2" align="center" gutterBottom>
               Directors
             </Typography>
-            
+
             <Grid container spacing={4}>
               {directors.map(memberCard)}
             </Grid>

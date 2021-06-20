@@ -2,7 +2,7 @@ const events = [
   {
     id: 1,
     name: "Young Entrepreneurs Case Competition",
-    image: "/seminar.png",
+    image: "/events/YECC.jpg",
     date: "21 June 2021",
     location: "UNSW",
     price: "free",

@@ -3,6 +3,8 @@ import React from "react";
 import { Block, ParallaxBlock } from "../../components/Block";
 
 const ContactUs = () => {
+  // TODO Use team picture for background
+  // TODO add social media links underneath location
   return (
     <>
       <ParallaxBlock image="https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
@@ -25,7 +27,7 @@ const ContactUs = () => {
               Email
             </Typography>
             <Typography component="h4" variant="h5" align="left" paragraph>
-              placeholderEmail@unswaseansociety.com
+              aseansocunsw@gmail.com
             </Typography>
             <Typography component="h3" variant="h4" align="left" paragraph>
               Location

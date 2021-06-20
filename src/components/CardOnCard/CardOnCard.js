@@ -34,7 +34,7 @@ const styles = (theme) => ({
   image: {
     position: "absolute",
     top: -28,
-    left: -100,
+    left: -135,
     right: 0,
     bottom: 0,
     width: "100%",

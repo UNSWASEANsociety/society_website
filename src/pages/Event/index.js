@@ -25,23 +25,19 @@ const get3Events = () => {
 
 const Event = () => {
   const { id } = useParams();
-
+  console.log()
   const selectedEvent = getEvent(id);
   console.log(id);
   console.log(selectedEvent);
   const events = get3Events();
+  // TODO events usually have sponsors rather than entire society
   return (
     <>
       <ParallaxBlock
         hasNotch={true}
-        image="/seminar.png"
-        style={{
-          position: "absolute",
-          width: "1500px",
-          height: "722px",
-          left: "0px",
-          top: "32px",
-        }}
+        // image="/seminar.png"
+        image={selectedEvent.image}
+        blur={2}
       >
         <Typography component="h1" variant="h3" align="center" gutterBottom>
           {selectedEvent.name}

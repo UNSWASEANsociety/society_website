@@ -4,7 +4,7 @@
  */
 import Container from "@material-ui/core/Container";
 import React from "react";
-import { Parallax } from "react-parallax";
+import { Background, Parallax } from "react-parallax";
 
 import styles from "./ParallaxBlock.module.scss";
 
@@ -13,15 +13,22 @@ const ParallaxBlock = ({
   height = "75vh",
   width = "xl",
   hasNotch,
+  style,
+  blur,
   children,
 }) => {
   return (
     <Parallax
       bgImage={image}
+      blur={blur}
       bgImageSizes=""
       strength={500}
+      style={style}
       className={hasNotch && styles.notch}
     >
+      {/* <Background className="custom-bg">
+        <img src={image} alt="event" />
+      </Background> */}
       <div style={{ height }}>
         <div className={styles.inner}>
           <Container maxWidth={width} minHeight>

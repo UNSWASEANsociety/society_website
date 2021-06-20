@@ -20,23 +20,23 @@ const About = () => {
     <>
       <ParallaxBlock>
         <Typography component="h1" variant="h2" align="center" gutterBottom>
-          We believe in everything ASEAN…
+          WE BELIEVE IN EVERYTHING ASEAN...
         </Typography>
       </ParallaxBlock>
       {/* <TestCarousel /> */}
       <Block>
         <Ones />
       </Block>
-      <Block>
+      <Block backgroundColor="white">
         <AboutASEAN />
       </Block>
       <Block>
-        <Typography component="h1" variant="h2" align="center" gutterBottom>
-          What is ASEAN?
+        <Typography style={{color: "#FFC956"}} component="h1" variant="h2" align="center" gutterBottom>
+          WHAT IS ASEAN?
         </Typography>
         <Youtube videoId="VDTdXDDzJ1k" />
       </Block>
-      <Block>
+      <Block backgroundColor="white">
         <ASEANCommunity />
       </Block>
       <Block>

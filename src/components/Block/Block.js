@@ -8,7 +8,7 @@ import { Fade } from "react-reveal";
 const Block = ({ style = null, backgroundColor, children }) => {
   let color;
   if (backgroundColor === "white" || backgroundColor === "#ffffff") {
-    color = "black"
+    color = "#414042"
   }
   return (
     <>

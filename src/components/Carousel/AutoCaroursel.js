@@ -17,7 +17,6 @@ const AutoCarousel = ({ items }) => {
     const intervalId = setInterval(incCurr, 5000);
     return () => clearInterval(intervalId);
   }, []);
-
   return (
     <AwesomeSlider
       buttons={false}
@@ -26,16 +25,21 @@ const AutoCarousel = ({ items }) => {
       selected={curr}
     >
       {items.map((item) => {
+        let style = {
+          height: "100%",
+          width: "100%",
+          // backgroundImage: `url(${item.image})`,
+          // backgroundColor: "blue",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        };
+        if (item.color) {
+          style.backgroundColor = item.color;
+        } else {
+          style.backgroundImage = `url(${item.image})`;
+        }
         return (
-          <div
-            style={{
-              height: "100%",
-              width: "100%",
-              backgroundImage: `url(${item.image})`,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
+          <div style={style}>
             <Typography component="h1" variant="h1" align="center" gutterBottom>
               {item.text}
             </Typography>
@@ -44,23 +48,6 @@ const AutoCarousel = ({ items }) => {
       })}
     </AwesomeSlider>
   );
-};
-
-AutoCarousel.defaultProps = {
-  items: [
-    {
-      image: "https://source.unsplash.com/random",
-      text: "One Vision",
-    },
-    {
-      image: "https://source.unsplash.com/random",
-      text: "One Identity",
-    },
-    {
-      image: "https://source.unsplash.com/random",
-      text: "One Community",
-    },
-  ],
 };
 
 export default AutoCarousel;
