@@ -6,7 +6,9 @@ const events = [
     date: "21 June 2021",
     location: "UNSW",
     price: "free",
-    speaker: "none",
+    speaker: [],
+    // Organisers: [],
+    // eventType: {isFormal: true, isInternal: true},
     description: `
     Have you always thought of a solution to a problem no one has ever done before?
     Do you have what it takes to start your entrepreneurial journey?

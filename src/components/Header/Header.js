@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Container, Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import CameraIcon from "@material-ui/icons/PhotoCamera";
 import React, { useEffect, useState } from "react";
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = ({ links }) => {
   const classes = useStyles();
-  
+
   const [width, setWidth] = useState(getWidth());
   useEffect(() => {
     const changeWidth = () => {
@@ -38,12 +38,12 @@ const Header = ({ links }) => {
   }, []);
 
   const visibleLinks = links.filter((link) => {
-    return link.onHeader
-  })
+    return link.onHeader;
+  });
 
   return (
     <div className={`${classes.root} ${styles.bar}`}>
-      <AppBar position="static" style={{backgroundColor: "#414042"}}>
+      <AppBar position="static" style={{ backgroundColor: "#414042" }}>
         <nav>
           <Toolbar>
             <Link to="/">
