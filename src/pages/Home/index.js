@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core/";
+import { Button, Typography } from "@material-ui/core/";
 import React from "react";
 import { Block, ParallaxBlock } from "../../components/Block";
 import { AutoCarousel } from "../../components/Carousel";
@@ -9,13 +9,14 @@ import MissionVision from "./Mission_Vision";
 import Purpose from "./Purpose";
 import Values from "./Values";
 import ReactTypingEffect from "react-typing-effect";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const events = getEvents();
 
   return (
     <>
-      <ParallaxBlock height="93vh" >
+      <ParallaxBlock height="93vh">
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           {/* <TypingText
             text="Welcome to UNSW ASEAN Society"
@@ -57,11 +58,7 @@ const Home = () => {
                     >
                       {character_renderer(sentences[0])}
                     </Typography>
-                    <Typography
-                      variant="h2"
-                      align="center"
-                      gutterBottom
-                    >
+                    <Typography variant="h2" align="center" gutterBottom>
                       {character_renderer(sentences[1])}
                     </Typography>
                   </>
@@ -106,7 +103,17 @@ const Home = () => {
             };
           })}
         />
-        Check out our latest events
+        <br/>
+        <div style={{display: "flex", justifyContent: "center"}}>
+          <Button
+            component={Link}
+            to="/events"
+            variant="outlined"
+            color="inherit"
+          >
+            Check out our latest events
+          </Button>
+        </div>
       </Block>
     </>
   );
