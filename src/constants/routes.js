@@ -65,13 +65,13 @@ const routes = [
   //   onHeader: false,
   //   onFooter: true,
   // },
-  {
-    name: "Sponsors",
-    path: "/sponsors",
-    component: <TestPage />,
-    onHeader: false,
-    onFooter: true,
-  },
+  // {
+  //   name: "Sponsors",
+  //   path: "/sponsors",
+  //   component: <TestPage />,
+  //   onHeader: false,
+  //   onFooter: true,
+  // },
 
   // { name: "Contact Us", path: "/contact-us", component: <Teams /> },
   // { name: "Privacy Policy", path: "/privacy-policy", component: <Teams /> },
