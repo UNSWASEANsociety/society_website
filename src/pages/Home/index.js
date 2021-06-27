@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <>
-      <ParallaxBlock>
+      <ParallaxBlock height="93vh" >
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           {/* <TypingText
             text="Welcome to UNSW ASEAN Society"
@@ -25,8 +25,8 @@ const Home = () => {
           {/* Source: https://www.npmjs.com/package/react-typing-effect */}
           <ReactTypingEffect
             typingDelay={1000}
-            cursor="_"
-            eraseDelay={60 * 60 * 24}
+            cursor=" "
+            eraseDelay={60 * 60 * 24 * 1000}
             text="WELCOME TO | UNSW ASEAN SOCIETY"
             cursorRenderer={(cursor) => <>{cursor}</>}
             displayTextRenderer={(text, i) => {
@@ -102,7 +102,7 @@ const Home = () => {
           items={events.slice(0, 3).map((event) => {
             return {
               image: event.image,
-              text: event.name,
+              text: "", // event.name
             };
           })}
         />

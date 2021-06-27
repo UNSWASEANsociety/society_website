@@ -43,25 +43,25 @@ const Header = ({ links }) => {
 
   return (
     <div className={`${classes.root} ${styles.bar}`}>
-      {/** TODO make background transparent */}
       <AppBar position="static" style={{ backgroundColor: "#414042" }}>
         <nav>
           <Toolbar>
-            {/** TODO use full society logo */}
-            
             <Link to="/">
-              <img src="/logo192.png" alt="UAS logo" className={styles.logo} />
+              <img
+                src="/White_logo_04.png"
+                alt="UAS logo"
+                className={styles.logo}
+              />
             </Link>
-            
-            <Link to="/" className={styles.homeLink}>
+
+            {/* <Link to="/" className={styles.homeLink}>
               <Typography variant="h6" className={classes.title}>
                 UNSW ASEAN Society
               </Typography>
-            </Link>
+            </Link> */}
             <Typography variant="h6" className={classes.title}>
-              {/* UNSW */}
+              {/* This Typography has to be here for other nav links to be aligned left*/}
             </Typography>
-            {/* <Button color="inherit">Login</Button> */}
             {width >= 600 ? (
               <Menu links={visibleLinks} />
             ) : (

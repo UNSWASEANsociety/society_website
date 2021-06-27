@@ -5,12 +5,13 @@ import { AutoCarousel } from "../../components/Carousel";
 const Ones = () => {
   return (
     <>
-      <Typography component="h1" variant="h2" align="center" gutterBottom>
+      {/* <Typography component="h1" variant="h2" align="center" gutterBottom>
         One Vision. One Identity. One Community.
-      </Typography>
+      </Typography> */}
       {/* idea: Use caroursel to rotate between the 3 items*/}
       {/* Change text colour to yellow, background to blue */}
       <AutoCarousel
+        height="20rem"
         items={[
           {
             color: "#374B81",

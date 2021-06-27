@@ -7,6 +7,8 @@ import Fade from "react-reveal/Fade";
 import Links from "./Links";
 import SocialMediaLinks from "./SocialMediaLinks";
 
+import styles from "./Footer.module.scss";
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -39,10 +41,15 @@ const Footer = () => {
             <Links />
             <Copyright />
             <SocialMediaLinks />
-            <img src="/logo192.png" alt="society logo"/>
+            <div className={styles.center_container}>
+              <img
+                src="/Logo_Wash_04.png"
+                alt="society logo"
+                className={styles.logo}
+              />
+            </div>
           </Fade>
         </Container>
-        
       </footer>
     </>
   );

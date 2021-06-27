@@ -13,7 +13,7 @@ const OtherEvents = ({ events }) => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           {events.map((event) => (
-            <Card image={event.image}>
+            <Card to={`/event/${event.id}`} image={event.image}>
               <Typography gutterBottom variant="h5" component="h2">
                 {event.name}
               </Typography>

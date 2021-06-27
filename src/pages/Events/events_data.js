@@ -7,6 +7,7 @@ const events = [
     location: "UNSW",
     price: "free",
     speaker: [],
+    schedule: [],
     // Organisers: [],
     // eventType: {isFormal: true, isInternal: true},
     description: `

@@ -18,7 +18,7 @@ import { Youtube } from "../../components/Youtube";
 const About = () => {
   return (
     <>
-      <ParallaxBlock>
+      <ParallaxBlock height="93vh">
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           WE BELIEVE IN EVERYTHING ASEAN...
         </Typography>

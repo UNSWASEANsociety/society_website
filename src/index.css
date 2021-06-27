@@ -1,3 +1,7 @@
+/*
+  Global style
+*/
+
 @font-face {
   font-family: 'Gill Sans';
   src: local('Gill Sans'), url(./fonts/GillSans/Gill\ Sans.otf) format('truetype');

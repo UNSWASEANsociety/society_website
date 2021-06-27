@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 
-const AutoCarousel = ({ items }) => {
+const AutoCarousel = ({ items, height }) => {
   const [curr, setCurr] = useState(0);
 
   const incCurr = () => {
@@ -23,6 +23,7 @@ const AutoCarousel = ({ items }) => {
       bullets={false}
       infinite={true}
       selected={curr}
+      style={{height: height}}
     >
       {items.map((item) => {
         let style = {
@@ -40,7 +41,7 @@ const AutoCarousel = ({ items }) => {
         }
         return (
           <div style={style}>
-            <Typography component="h1" variant="h1" align="center" gutterBottom>
+            <Typography component="h1" variant="h2" align="center" gutterBottom>
               {item.text}
             </Typography>
           </div>
