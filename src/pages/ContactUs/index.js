@@ -1,6 +1,7 @@
 import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 import { Block, ParallaxBlock } from "../../components/Block";
+import ContactUsForm from "./ContactUsForm";
 
 const ContactUs = () => {
   // TODO Use team picture for background
@@ -38,6 +39,7 @@ const ContactUs = () => {
           </Grid>
           <Grid item md={6}>
             {/* <form>Put email form here</form> */}
+            <ContactUsForm />
           </Grid>
         </Grid>
       </Block>
