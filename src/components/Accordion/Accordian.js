@@ -1,11 +1,11 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Accordion from "@material-ui/core/Accordion";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import PropTypes from "prop-types";
+import React from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +17,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleAccordion({ data }) {
+export default function SimpleAccordion({ data = [
+  {
+    heading: "Accordion 1",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+  },
+  {
+    heading: "Accordion 2",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+  },
+  {
+    heading: "Accordion 3",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
+  },
+] }) {
   const classes = useStyles();
 
   return (
@@ -43,28 +59,6 @@ export default function SimpleAccordion({ data }) {
   );
 }
 
-SimpleAccordion.defaultProps = {
-  data: [
-    {
-      heading: "Accordion 1",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
-         Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
-    },
-    {
-      heading: "Accordion 2",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
-         Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
-    },
-    {
-      heading: "Accordion 3",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
-         Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
-    },
-  ],
-};
 
 SimpleAccordion.propTypes = {
   data: PropTypes.exact({

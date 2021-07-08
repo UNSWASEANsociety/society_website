@@ -1,12 +1,10 @@
-import { Hidden } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 import { Block, ParallaxBlock } from "../../components/Block";
 import { Card } from "../../components/Card";
-import { HTimeLine } from "../../components/TimeLine";
+import getEvents from "./events_data";
 
-import getEvents from "./events_data"
 
 export default function Events() {
   const events = getEvents();

@@ -1,15 +1,12 @@
-import Button from "@material-ui/core/Button";
-import CardActions from "@material-ui/core/CardActions";
+import MUICard from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import React from "react";
 import { Link } from "react-router-dom";
-import MUICard from "@material-ui/core/Card";
-
 import styles from "./Card.module.scss";
+
 
 const useStyles = makeStyles((theme) => ({
   icon: {

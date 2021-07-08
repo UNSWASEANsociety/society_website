@@ -1,10 +1,11 @@
+import { Typography } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
-import { Typography, Container } from "@material-ui/core";
+import { LinkedIn } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
 import { Block, ParallaxBlock } from "../../components/Block";
 import { Card } from "../../components/Card";
 import tempteam from "./TempTeam";
-import { LinkedIn } from "@material-ui/icons";
+import {Title} from "../../components/Dynamic_Typography"
 
 const getTeam = () => {
   return tempteam;
@@ -93,10 +94,8 @@ export default function Team() {
     <React.Fragment>
       {/* <CssBaseline /> */}
       <main>
-        <ParallaxBlock>
-          <Typography component="h1" variant="h2" align="center" gutterBottom>
-            MEET THE TEAM
-          </Typography>
+        <ParallaxBlock image="/UAC2019.jpg" height="94vh" bgImageStyle={{ top: "-125px"}} >
+          <Title text="MEET THE TEAM" component="h2"/>
         </ParallaxBlock>
         <section style={{ padding: "2rem 0" }}>
           <Block>
@@ -123,11 +122,6 @@ export default function Team() {
               {directors.map(memberCard)}
             </Grid>
           </Block>
-          {/* <Block>
-            <Typography component="h1" variant="h2" align="center" gutterBottom>
-              Associates
-            </Typography>
-            </Block> */}
           {associateBlock}
         </section>
       </main>

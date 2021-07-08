@@ -1,7 +1,7 @@
+import { Grid, Typography } from "@material-ui/core/";
 import React from "react";
-import { Container, Grid, Typography } from "@material-ui/core/";
-
 import styles from "./Purpose.module.scss";
+
 
 const Purpose = () => {
   // Using https://codepen.io/ines/pen/qXrYQO for list
