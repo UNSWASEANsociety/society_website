@@ -1,22 +1,22 @@
 import { Button, Typography } from "@material-ui/core/";
 import React from "react";
+import { Link } from "react-router-dom";
+import ReactTypingEffect from "react-typing-effect";
 import { Block, ParallaxBlock } from "../../components/Block";
 import { AutoCarousel } from "../../components/Carousel";
-import { TypingText } from "../../components/TypingText";
 import getEvents from "../Events/events_data";
 import About from "./About";
 import MissionVision from "./Mission_Vision";
 import Purpose from "./Purpose";
 import Values from "./Values";
-import ReactTypingEffect from "react-typing-effect";
-import { Link } from "react-router-dom";
+import {Title} from "../../components/Dynamic_Typography"
 
 const Home = () => {
   const events = getEvents();
 
   return (
     <>
-      <ParallaxBlock height="93vh">
+      <ParallaxBlock height="94vh">
         <Typography component="h1" variant="h2" align="center" gutterBottom>
           {/* <TypingText
             text="Welcome to UNSW ASEAN Society"
@@ -50,29 +50,13 @@ const Home = () => {
                 const sentences = text.split("|");
                 return (
                   <>
-                    <Typography
-                      component="h1"
-                      variant="h3"
-                      align="center"
-                      gutterBottom
-                    >
-                      {character_renderer(sentences[0])}
-                    </Typography>
-                    <Typography variant="h2" align="center" gutterBottom>
-                      {character_renderer(sentences[1])}
-                    </Typography>
+                    <Title text={character_renderer(sentences[0])} component="h2"/>
+                    <Title text={character_renderer(sentences[1])} component="h1"/>
                   </>
                 );
               }
               return (
-                <Typography
-                  component="h1"
-                  variant="h3"
-                  align="center"
-                  gutterBottom
-                >
-                  {character_renderer(text)}
-                </Typography>
+                <Title text={character_renderer(text)} component="h2"/>
               );
             }}
           />

@@ -58,7 +58,7 @@ function CardOnCard(props) {
         <Grid item xs={12} md={6} className={classes.imagesWrapper}>
           <Hidden smDown>
             <div className={classes.imageDots} />
-            <img src={image} alt="image" className={classes.image} />
+            <img src={image} alt="card on card" className={classes.image} />
           </Hidden>
         </Grid>
       </Grid>

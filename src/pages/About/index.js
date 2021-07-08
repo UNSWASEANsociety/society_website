@@ -1,27 +1,19 @@
 import Typography from "@material-ui/core/Typography";
-import React, { useEffect, useState } from "react";
-import AwesomeSlider from "react-awesome-slider";
+import React from "react";
 import "react-awesome-slider/dist/styles.css";
-import { Button, Grid } from "@material-ui/core";
 import { Block, ParallaxBlock } from "../../components/Block";
-import { Accordion } from "../../components/Accordion";
-import { TimeLine } from "../../components/TimeLine";
-
-import { CardOnCard } from "../../components/CardOnCard";
-import { AutoCarousel } from "../../components/Carousel";
-import Ones from "./Ones";
-import AboutASEAN from "./AboutASEAN";
-import ASEANPillars from "./ASEANPillars";
-import ASEANCommunity from "./ASEANCommunity";
 import { Youtube } from "../../components/Youtube";
+import AboutASEAN from "./AboutASEAN";
+import ASEANCommunity from "./ASEANCommunity";
+import ASEANPillars from "./ASEANPillars";
+import Ones from "./Ones";
+import {Title} from "../../components/Dynamic_Typography"
 
 const About = () => {
   return (
     <>
       <ParallaxBlock height="93vh">
-        <Typography component="h1" variant="h2" align="center" gutterBottom>
-          WE BELIEVE IN EVERYTHING ASEAN...
-        </Typography>
+        <Title text="WE BELIEVE IN EVERYTHING ASEAN..."/>
       </ParallaxBlock>
       {/* <TestCarousel /> */}
       <Block>

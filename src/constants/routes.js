@@ -1,12 +1,11 @@
 import React from "react";
 import About from "../pages/About";
-import Home from "../pages/Home";
-import Team from "../pages/Team";
+import ContactUs from "../pages/ContactUs";
 import Event from "../pages/Event";
 import Events from "../pages/Events";
+import Home from "../pages/Home";
+import Team from "../pages/Team";
 import TestPage from "../pages/TestPage";
-import ContactUs from "../pages/ContactUs";
-import FAQ from "../pages/FAQ";
 
 const routes = [
   {

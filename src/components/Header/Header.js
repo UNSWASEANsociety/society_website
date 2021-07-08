@@ -1,13 +1,12 @@
-import { AppBar, Container, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import CameraIcon from "@material-ui/icons/PhotoCamera";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import getWidth from "../../utils/getwidth";
+import styles from "./Header.module.scss";
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
 
-import styles from "./Header.module.scss";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
