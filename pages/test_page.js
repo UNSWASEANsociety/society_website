@@ -2,16 +2,16 @@ import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 import "react-awesome-slider/dist/styles.css";
-import { Accordion } from "../components/Accordion";
-import { AsortedList } from "../components/AsortedList";
-import { Block, VideoBlock } from "../components/Block";
-import { TimeLine } from "../components/TimeLine";
-import { TypingEffect } from "../components/TypingText";
-import { Youtube } from "../components/Youtube";
-import { Footer } from "../components/Footer";
+import { Accordion } from "@/components/Accordion";
+import { AsortedList } from "@/components/AsortedList";
+import { Block, VideoBlock } from "@/components/Block";
+import { TimeLine } from "@/components/TimeLine";
+import { TypingEffect } from "@/components/TypingText";
+import { Youtube } from "@/components/Youtube";
+import { Footer } from "@/components/Footer";
 import Image from "next/image";
-import routes from "../constants/routes"
-import { Header } from "../components/Header";
+import routes from "@/constants/routes"
+import { Header } from "@/components/Header";
 
 const TestPage = () => {
   return (

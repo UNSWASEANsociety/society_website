@@ -1,16 +1,16 @@
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 import "react-awesome-slider/dist/styles.css";
-import { Block, ParallaxBlock } from "../components/Block";
-import { Youtube } from "../components/Youtube";
-import AboutASEAN from "../page_sections/About/AboutASEAN";
-import ASEANCommunity from "../page_sections/About/ASEANCommunity";
-import ASEANPillars from "../page_sections/About/ASEANPillars";
-import Ones from "../page_sections/About/Ones";
-import { Title } from "../components/Dynamic_Typography"
-import { Footer } from "../components/Footer";
-import routes from "../constants/routes"
-import { Header } from "../components/Header";
+import { Block, ParallaxBlock } from "@/components/Block";
+import { Youtube } from "@/components/Youtube";
+import AboutASEAN from "@/page_sections/About/AboutASEAN";
+import ASEANCommunity from "@/page_sections/About/ASEANCommunity";
+import ASEANPillars from "@/page_sections/About/ASEANPillars";
+import Ones from "@/page_sections/About/Ones";
+import { Title } from "@/components/Dynamic_Typography"
+import { Footer } from "@/components/Footer";
+import routes from "@/constants/routes"
+import { Header } from "@/components/Header";
 import Head from "next/head"
 const About = () => {
   return (
@@ -24,7 +24,7 @@ const About = () => {
         <Title text="WE BELIEVE IN EVERYTHING ASEAN..." />
       </ParallaxBlock>
       {/* <TestCarousel /> */}
-      <Block>
+      <Block fadeIn={false}>
         <Ones />
       </Block>
       <Block backgroundColor="white">

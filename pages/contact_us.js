@@ -1,9 +1,9 @@
 import { Grid, Typography } from "@material-ui/core";
 import React from "react";
-import { Block, ParallaxBlock } from "../components/Block";
-import { Footer } from "../components/Footer";
-import routes from "../constants/routes"
-import { Header } from "../components/Header";
+import { Block, ParallaxBlock } from "@/components/Block";
+import { Footer } from "@/components/Footer";
+import routes from "@/constants/routes"
+import { Header } from "@/components/Header";
 const ContactUs = () => {
   // TODO Use team picture for background
   // TODO add social media links underneath location

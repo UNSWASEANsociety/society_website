@@ -1,12 +1,12 @@
 import { Container } from "@material-ui/core";
-import Link from "@material-ui/core/Link";
+import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 import Fade from "react-reveal/Fade";
 import Links from "./Links";
 import SocialMediaLinks from "./SocialMediaLinks";
-import Image from 'next/image'
+import Image from "next/image";
 
 import styles from "./Footer.module.scss";
 
@@ -39,17 +39,25 @@ const Footer = () => {
       <footer className={classes.footer}>
         <Container>
           <Fade bottom>
-          <Links />
-          <Copyright />
-          <SocialMediaLinks />
-          <div className={styles.center_container}>
-            <Image src="/Logo_Wash_04.png" alt="society logo" width="300%" height="200%" className={styles.logo} />
-            {/* <img
+            <Links />
+            <Copyright />
+            <SocialMediaLinks />
+            <div className={styles.center_container}>
+              <Link href="/" passHref>
+                <Image
+                  src="/Logo_Wash_04.png"
+                  alt="society logo"
+                  width="300%"
+                  height="200%"
+                  className={styles.logo}
+                />
+              </Link>
+              {/* <img
                 src="/Logo_Wash_04.png"
                 alt="society logo"
                 className={styles.logo}
               /> */}
-          </div>
+            </div>
           </Fade>
         </Container>
       </footer>

@@ -5,16 +5,16 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 // import { useParams } from "react-router-dom";
-import { Block, ParallaxBlock } from "../../components/Block";
-import getEvents from "../../page_sections/Events/events_data";
-import IconSummary from "../../page_sections/Event/IconSummary";
-import OtherEvents from "../../page_sections/Event/OtherEvents";
-import Schedule from "../../page_sections/Event/Schedule";
-import { Footer } from "../../components/Footer";
+import { Block, ParallaxBlock } from "@/components/Block";
+import getEvents from "@/page_sections/Events/events_data";
+import IconSummary from "@/page_sections/Event/IconSummary";
+import OtherEvents from "@/page_sections/Event/OtherEvents";
+import Schedule from "@/page_sections/Event/Schedule";
+import { Footer } from "@/components/Footer";
 
 import { useRouter } from 'next/router'
-import routes from "../../constants/routes"
-import { Header } from "../../components/Header";
+import routes from "@/constants/routes"
+import { Header } from "@/components/Header";
 
 const getEvent = (id) => {
   return getEvents().filter((event) => {

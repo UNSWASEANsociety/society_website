@@ -1,10 +1,10 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import { Accordion } from "../components/Accordion";
-import { Block, ParallaxBlock } from "../components/Block";
-import { Footer } from "../components/Footer";
-import routes from "../constants/routes"
-import { Header } from "../components/Header";
+import { Accordion } from "@/components/Accordion";
+import { Block, ParallaxBlock } from "@/components/Block";
+import { Footer } from "@/components/Footer";
+import routes from "@/constants/routes"
+import { Header } from "@/components/Header";
 const FAQ = () => {
   return (
     <>

@@ -2,13 +2,13 @@ import { Typography } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import { LinkedIn } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
-import { Block, ParallaxBlock } from "../components/Block";
-import { Card } from "../components/Card";
-import tempteam from "../page_sections/Team/TempTeam";
-import { Title } from "../components/Dynamic_Typography";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import routes from "../constants/routes";
+import { Block, ParallaxBlock } from "@/components/Block";
+import { Card } from "@/components/Card";
+import tempteam from "@/page_sections/Team/TempTeam";
+import { Title } from "@/components/Dynamic_Typography";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import routes from "@/constants/routes";
 
 
 const getTeam = () => {

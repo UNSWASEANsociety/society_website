@@ -4,19 +4,19 @@ import { Button, Typography } from "@material-ui/core/";
 import React from "react";
 import Link from 'next/link'
 import ReactTypingEffect from "react-typing-effect";
-import { Block, ParallaxBlock } from "../components/Block";
-import { AutoCarousel } from "../components/Carousel";
-import getEvents from "../page_sections/Events/events_data";
-import About from "../page_sections/Home/About";
-import MissionVision from "../page_sections/Home/Mission_Vision";
-import Purpose from "../page_sections/Home/Purpose";
-import Values from "../page_sections/Home/Values";
-import { Title } from "../components/Dynamic_Typography"
+import { Block, ParallaxBlock } from "@/components/Block";
+import { AutoCarousel } from "@/components/Carousel";
+import getEvents from "@/page_sections/Events/events_data";
+import About from "@/page_sections/Home/About";
+import MissionVision from "@/page_sections/Home/Mission_Vision";
+import Purpose from "@/page_sections/Home/Purpose";
+import Values from "@/page_sections/Home/Values";
+import { Title } from "@/components/Dynamic_Typography"
 
 
-import routes from "../constants/routes"
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import routes from "@/constants/routes"
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 
 const Home = () => {

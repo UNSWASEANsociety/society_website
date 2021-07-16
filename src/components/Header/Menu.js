@@ -16,7 +16,9 @@ const Menu = ({ links }) => {
               href={link.path}
               passHref
             >
-              {link.name}
+              <Typography>
+                {link.name}
+              </Typography>
             </Link>
           </li>
         );

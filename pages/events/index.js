@@ -1,12 +1,12 @@
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import React from "react";
-import { Block, ParallaxBlock } from "../../components/Block";
-import { Card } from "../../components/Card";
-import getEvents from "../../page_sections/Events/events_data";
-import { Footer } from "../../components/Footer";
-import routes from "../../constants/routes"
-import { Header } from "../../components/Header";
+import { Block, ParallaxBlock } from "@/components/Block";
+import { Card } from "@/components/Card";
+import getEvents from "@/page_sections/Events/events_data";
+import { Footer } from "@/components/Footer";
+import routes from "@/constants/routes"
+import { Header } from "@/components/Header";
 
 export default function Events() {
   const events = getEvents();

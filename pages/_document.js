@@ -1,7 +1,7 @@
-import React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheets } from '@material-ui/styles'
 import { createTheme, responsiveFontSizes } from '@material-ui/core/styles'
+import { ServerStyleSheets } from '@material-ui/styles'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
+import React from 'react'
 
 
 const theme = responsiveFontSizes(createTheme({
@@ -19,7 +19,6 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
-
           <meta name="theme-color" content={theme.palette.primary.main} />
         </Head>
         <body>

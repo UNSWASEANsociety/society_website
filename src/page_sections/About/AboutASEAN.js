@@ -1,6 +1,6 @@
 import { Button, Typography } from '@material-ui/core'
 import React from 'react'
-import { CardOnCard } from '../../components/CardOnCard'
+import { CardOnCard } from '@/components/CardOnCard'
 
 const AboutASEAN = () => {
     return (
