@@ -44,6 +44,14 @@ const routes = [
     onHeader: false,
     onFooter: true,
   },
+
+  {
+    name: "login",
+    path: "/login",
+    onHeader: true,
+    onFooter: false,
+  },
+
   // {
   //   name: "FAQ",
   //   path: "/faq",
