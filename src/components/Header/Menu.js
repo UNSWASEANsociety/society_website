@@ -16,7 +16,7 @@ const Menu = ({ links }) => {
               href={link.path}
               passHref
             >
-              <Typography>
+              <Typography variant="h5">
                 {link.name}
               </Typography>
             </Link>

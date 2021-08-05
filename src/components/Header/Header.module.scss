@@ -1,11 +1,14 @@
 .logo {
-    margin: 0.5rem 0;
-    width: 6rem;
+  display: flex;
+  margin: 0.5rem 0;
+  padding: 0;
+  overflow: auto;
+  width: 8rem;
 }
 
 .homeLink {
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    color: white;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: white;
 }

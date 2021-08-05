@@ -7,10 +7,9 @@ import Menu from "./Menu";
 import Image from "next/image";
 import MobileMenu from "./MobileMenu";
 
-
 const getWidth = () => {
   return 1000;
-}
+};
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,17 +48,23 @@ const Header = ({ links }) => {
   // }
   return (
     <div className={`${classes.root} ${styles.bar}`}>
-      <AppBar position="static" style={{ backgroundColor: "#414042" }}>
+      {/* <AppBar position="absolute" color="transparent"> */}
+      <AppBar
+        position="absolute"
+        style={{ backgroundColor: "#414042", zIndex: 1 }}
+      >
         <nav>
           <Toolbar>
             <Link href="/" passHref>
-              <Image
-                src="/White_logo_04.png"
-                alt="UAS logo"
-                width="100%"
-                height="50%"
-                className={styles.logo}
-              />
+              <span className={styles.logo}>
+                <Image
+                  src="/White_logo_04.png"
+                  alt="UAS logo"
+                  width={170.25}
+                  height={78}
+                  quality={90}
+                />
+              </span>
             </Link>
             <Typography variant="h6" className={classes.title}>
               {/* This Typography has to be here for other nav links to be aligned left*/}
@@ -68,7 +73,7 @@ const Header = ({ links }) => {
               <Menu links={visibleLinks} />
             </Hidden>
             <Hidden mdUp>
-              <MobileMenu links={visibleLinks}/>
+              <MobileMenu links={visibleLinks} />
             </Hidden>
           </Toolbar>
         </nav>

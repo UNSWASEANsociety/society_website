@@ -20,7 +20,7 @@ const About = () => {
         <meta name="description" content="Put your description here."/>
       </Head>
       <Header links={routes} />
-      <ParallaxBlock height="93vh">
+      <ParallaxBlock height="100vh">
         <Title text="WE BELIEVE IN EVERYTHING ASEAN..." />
       </ParallaxBlock>
       {/* <TestCarousel /> */}

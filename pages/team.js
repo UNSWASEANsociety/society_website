@@ -10,16 +10,12 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import routes from "@/constants/routes";
 
-
 const getTeam = () => {
   return tempteam;
 };
 // This function gets called at build time
 
-
-
 export default function Team() {
-
   const [execs, setExecs] = useState([]);
   const [directors, setDirectors] = useState([]);
   const [associates, setAssociates] = useState([]);
@@ -99,7 +95,11 @@ export default function Team() {
 
       {/* <CssBaseline /> */}
       <main>
-        <ParallaxBlock image="/UAC2019.jpg" height="94vh" bgImageStyle={{ top: "-125px" }} >
+        <ParallaxBlock
+          image="/UAC2019.jpg"
+          height="100vh"
+          bgImageStyle={{ top: "-150px" }}
+        >
           <Title text="MEET THE TEAM" component="h2" />
         </ParallaxBlock>
         <section style={{ padding: "2rem 0" }}>

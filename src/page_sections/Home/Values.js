@@ -21,7 +21,7 @@ const Values = () => {
         </Grid>
         <Grid item md={6} xs={12}>
           <Typography align="center">
-            <img src="/Artboard_2.png" style={{ width: "8rem" }} alt="Empower logo" />
+            <img src="/Artboard_2.png" style={{ width: "8rem", height: "100%" }} alt="Empower logo" />
           </Typography>
           <Typography style={{ color: "#FFC956" }} component="h2" variant="h3" align="center" gutterBottom>
             Empower
@@ -31,9 +31,6 @@ const Values = () => {
           </Typography>
         </Grid>
       </Grid>
-      <br />
-      <br />
-      <br />
       <br />
       <Grid container>
         <Grid item md={6} xs={12}>

@@ -1,8 +1,17 @@
-.linkGroup {
+.root {
     display: flex;
-    flex-direction: column;    
 }
 
-.link {
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+}
 
+.hr_line {
+  margin: 0;
+  padding: 0;
+}
+
+.link_text {
+    margin: 10px 0;
 }
