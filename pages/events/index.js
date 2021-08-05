@@ -7,9 +7,26 @@ import getEvents from "@/page_sections/Events/events_data";
 import { Footer } from "@/components/Footer";
 import routes from "@/constants/routes"
 import { Header } from "@/components/Header";
+import backend_route from "@/constants/backend_route";
 
-export default function Events() {
-  const events = getEvents();
+
+export async function getServerSideProps(context) {
+  // TODO 
+  const res = await fetch(`${backend_route}/events/list?Start_index=0&End_index=5`);
+  const data = await res.json();
+  const {events} = data;
+  console.log(data);
+  return {
+    props: {
+      events
+    }, // will be passed to the page component as props
+  }
+}
+
+export default function Events({events}) {
+  // console.log(props);
+  // const events = getEvents();
+  console.log(events)
   return (
     <>
       <Header links={routes} />
@@ -27,7 +44,7 @@ export default function Events() {
         <Block>
           <Grid container spacing={4}>
             {events.map((event) => (
-              <Card to={`/events/${event.id}`} image={event.image} key={event.id}>
+              <Card to={`/events/${event.id}`} image={event.image} key={event.e_id}>
                 <Typography gutterBottom variant="h5" component="h2">
                   {event.name}
                 </Typography>
