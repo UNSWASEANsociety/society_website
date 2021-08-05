@@ -7,5 +7,4 @@ module.exports = {
       "images.squarespace-cdn.com",
     ],
   },
-  target: "serverless",
 };
