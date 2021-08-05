@@ -2,9 +2,10 @@ import React from "react";
 import styles from "./Block.module.scss";
 import { Container } from "@material-ui/core";
 import PropTypes from "prop-types";
-
-import { Fade } from "react-reveal";
-// import { motion } from "framer-motion";
+import { dynamic } from "next";
+// import { Fade } from "react-reveal";
+import { motion } from "framer-motion";
+import FadeInWhenVisible from "../FadeInWhenVisible";
 
 const Block = ({ style = null, backgroundColor, children, fadeIn = true }) => {
   let color;
@@ -14,9 +15,11 @@ const Block = ({ style = null, backgroundColor, children, fadeIn = true }) => {
   let content;
   if (fadeIn) {
     content = (
-      <Fade bottom>
-        <div className={styles.innerContent}>{children}</div>
-      </Fade>
+      // <Fade bottom>
+      <FadeInWhenVisible>
+        <motion.div className={styles.innerContent}>{children}</motion.div>
+      </FadeInWhenVisible>
+      // </Fade>
     );
   } else {
     content = <div className={styles.innerContent}>{children}</div>;

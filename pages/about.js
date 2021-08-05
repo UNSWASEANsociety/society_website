@@ -24,9 +24,9 @@ const About = () => {
         <Title text="WE BELIEVE IN EVERYTHING ASEAN..." />
       </ParallaxBlock>
       {/* <TestCarousel /> */}
-      <Block fadeIn={false}>
+      <div style={{padding:"4rem 0"}}>
         <Ones />
-      </Block>
+      </div>
       <Block backgroundColor="white">
         <AboutASEAN />
       </Block>

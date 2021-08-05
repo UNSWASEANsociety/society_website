@@ -6,35 +6,46 @@ import { Grid, Typography } from "@material-ui/core";
 const Ones = () => {
   return (
     <>
-      <Grid container>
-        <Grid item md={4} xs={12}>
-          <motion.div
-            initial={{ x: -3000 }}
-            animate={{ x: [-3000, 0] }}
-            transition={{ duration: 6 , times: [0, 0.8]}}
-          >
-            <Typography variant="h3" align="center" gutterBottom>One Vision</Typography>
-          </motion.div>
+      <div style={{overflow:"clip", width:"100%", padding:"0"}}>
+        <Grid container>
+          <Grid item md={4} xs={12}>
+            <motion.div
+              // initial={{ x: -3000 }}
+              initial="hidden"
+              animate={{ x: [3000, 0] }}
+              transition={{ duration: 6, times: [0, 0.8] }}
+            >
+              <Typography variant="h3" align="center" gutterBottom>
+                One Vision
+              </Typography>
+            </motion.div>
+          </Grid>
+          <Grid item md={4} xs={12}>
+            <motion.div
+              // initial={{ x: -2500 }}
+              initial="hidden"
+              animate={{ x: [2500, 0] }}
+              transition={{ duration: 4, times: [0, 0.8] }}
+            >
+              <Typography variant="h3" align="center" gutterBottom>
+                One Identity
+              </Typography>
+            </motion.div>
+          </Grid>
+          <Grid item md={4} xs={12}>
+            <motion.div
+              // initial={{ x: -2000 }}
+              initial="hidden"
+              animate={{ x: [2000, 0] }}
+              transition={{ duration: 2, times: [0, 1] }}
+            >
+              <Typography variant="h3" align="center" gutterBottom>
+                One Community
+              </Typography>
+            </motion.div>
+          </Grid>
         </Grid>
-        <Grid item md={4}  xs={12}>
-          <motion.div
-            initial={{ x: -2500 }}
-            animate={{ x: [-2500, 0] }}
-            transition={{ duration: 4, times: [0, 0.8] }}
-          >
-            <Typography variant="h3" align="center" gutterBottom>One Identity</Typography>
-          </motion.div>
-        </Grid>
-        <Grid item md={4}  xs={12}>
-          <motion.div
-            initial={{ x: -2000 }}
-            animate={{ x: 0 }}
-            transition={{ duration: 2 }}
-          >
-            <Typography variant="h3" align="center" gutterBottom>One Community</Typography>
-          </motion.div>
-        </Grid>
-      </Grid>
+      </div>
 
       {/* <Typography component="h1" variant="h2" align="center" gutterBottom>
         One Vision. One Identity. One Community.
