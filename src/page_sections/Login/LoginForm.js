@@ -16,9 +16,9 @@ const LoginForm = () => {
     <>
       <div className={styles.outer}>
         <Container maxWidth="sm">
-          <Paper>
+          <div className={styles.paper}>
             <div className={styles.outer_padding}>
-              <Typography component="h1" variant="h2" gutterBottom>
+              <Typography component="h1" variant="h3" gutterBottom>
                 Log In
               </Typography>
               <form className={styles.formGroup} noValidate autoComplete="off">
@@ -54,7 +54,7 @@ const LoginForm = () => {
                 <Link href="/">{"Don't Have account?"}</Link>
               </div>
             </div>
-          </Paper>
+          </div>
         </Container>
       </div>
     </>

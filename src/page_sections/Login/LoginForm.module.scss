@@ -6,21 +6,25 @@
   text-align: center;
   top: 30%;
   width: 100%;
-
-  .outer_padding {
-    padding: 2rem 4rem;
-    .formGroup {
-      display: flex;
-      flex-direction: column;
+  .paper {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    .outer_padding {
+      padding: 2rem 4rem;
+      .formGroup {
+        display: flex;
+        flex-direction: column;
         .textBox {
-            margin-bottom: 1rem;
+          margin-bottom: 1rem;
         }
-    }
+      }
 
-    .links {
-      display: flex;
-      text-decoration: underline;
-      justify-content: space-between;
+      .links {
+        display: flex;
+        text-decoration: underline;
+        justify-content: space-between;
+      }
     }
   }
 }
