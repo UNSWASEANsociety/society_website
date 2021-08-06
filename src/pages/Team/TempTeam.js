@@ -45,7 +45,6 @@ const TeamList = [
     { category: "associates", team: "Operations", role: "Operations Associate", name: "Daryl Lee" },
     { category: "associates", team: "Operations", role: "Operations Associate", name: "Katrina Alchin" },
     { category: "associates", team: "Finance & Partnership", role: "F&P Associate", name: "Christopher Chong Hong Chiok" },
-    { category: "associates", team: "Finance & Partnership", role: "F&P Associate", name: "Kaung Hlaing" },
     { category: "associates", team: "Finance & Partnership", role: "F&P Associate", name: "Timothy Ng" },
     { category: "associates", team: "Finance & Partnership", role: "F&P Associate", name: "Stella Lautner" },
     { category: "associates", team: "Finance & Partnership", role: "F&P Associate", name: "Vivian Wong" },
