@@ -9,7 +9,6 @@ import routes from "@/constants/routes"
 import { Header } from "@/components/Header";
 import backend_route from "@/constants/backend_route";
 
-
 export async function getServerSideProps(context) {
   // TODO 
   const res = await fetch(`${backend_route}/events/list?Start_index=0&End_index=5`);
@@ -44,7 +43,7 @@ export default function Events({events}) {
         <Block>
           <Grid container spacing={4}>
             {events.map((event) => (
-              <Card to={`/events/${event.id}`} image={event.image} key={event.e_id}>
+              <Card to={`/events/${event.e_id}`} image={event.image} key={event.e_id}>
                 <Typography gutterBottom variant="h5" component="h2">
                   {event.name}
                 </Typography>

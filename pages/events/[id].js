@@ -12,9 +12,25 @@ import OtherEvents from "@/page_sections/Event/OtherEvents";
 import Schedule from "@/page_sections/Event/Schedule";
 import { Footer } from "@/components/Footer";
 
-import { useRouter } from 'next/router'
-import routes from "@/constants/routes"
+import { useRouter } from "next/router";
+import routes from "@/constants/routes";
 import { Header } from "@/components/Header";
+import backend_route from "@/constants/backend_route";
+
+export async function getServerSideProps(context) {
+  // TODO
+  const res = await fetch(
+    `${backend_route}/events/list?Start_index=0&End_index=5`
+  );
+  const data = await res.json();
+  const { events } = data;
+  console.log(data);
+  return {
+    props: {
+      events,
+    }, // will be passed to the page component as props
+  };
+}
 
 const getEvent = (id) => {
   return getEvents().filter((event) => {
@@ -34,7 +50,7 @@ const Event = () => {
   const events = get3Events();
   // TODO events usually have sponsors rather than entire society
   if (!selectedEvent) {
-    return <></>
+    return <></>;
   }
   return (
     <>
@@ -42,8 +58,8 @@ const Event = () => {
       <ParallaxBlock
         hasNotch={true}
         image="/seminar.png"
-      // image={selectedEvent.image}
-      // blur={2}
+        // image={selectedEvent.image}
+        // blur={2}
       >
         <Typography component="h1" variant="h3" align="center" gutterBottom>
           {selectedEvent.name}
