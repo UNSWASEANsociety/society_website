@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const routes = [
   {
     name: "Home",
@@ -51,6 +50,8 @@ const routes = [
     onHeader: true,
     onFooter: false,
   },
+
+  { name: "register", path: "/register", onHeader: true, onFooter: false },
 
   // {
   //   name: "FAQ",
