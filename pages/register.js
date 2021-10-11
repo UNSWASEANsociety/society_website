@@ -19,7 +19,7 @@ export default function Register() {
   const classes = useStyles();
   const paperStyle = {
     padding: 20,
-    height: "95vh",
+    // height: "95vh",
     width: 500,
     margin: "20px auto ",
     borderRadius: "20px",

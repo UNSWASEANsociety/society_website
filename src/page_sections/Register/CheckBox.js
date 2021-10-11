@@ -1,15 +1,14 @@
-import React from "react";
-import clsx from "clsx";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import Radio from "@material-ui/core/Radio";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
 import Select from "@material-ui/core/Select";
-import DropDown from "./DropDown";
-import DepartmentData from "./DepartmentData";
 import { makeStyles } from "@material-ui/core/styles";
+import clsx from "clsx";
+import React from "react";
+import DepartmentData from "./DepartmentData";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -81,9 +80,9 @@ export default function CheckBox(props) {
     setPopUp(false);
   };
 
-  function departmentDropDown(data) {
-    return <DropDown key={data.id} name={data.name} />;
-  }
+  // function departmentDropDown(data) {
+  //   return <DropDown key={data.id} name={data.name} />;
+  // }
 
   return (
     <div className={classes.root}>
@@ -128,17 +127,20 @@ export default function CheckBox(props) {
               label="Department"
             >
               {/* <MenuItem value="Membership & Development">
-              Membership & Development
-            </MenuItem>
-            <MenuItem value="Marketing">Marketing</MenuItem>
-            <MenuItem value="Information Technology">
-              Information Technology
-            </MenuItem>
-            <MenuItem value="Operations">Operations</MenuItem>
-            <MenuItem value="Finance & Partnership">
-              Finance & Partnership
-            </MenuItem> */}
-              {DepartmentData.map(departmentDropDown)}
+                Membership & Development
+              </MenuItem>
+              <MenuItem value="Marketing">Marketing</MenuItem>
+              <MenuItem value="Information Technology">
+                Information Technology
+              </MenuItem>
+              <MenuItem value="Operations">Operations</MenuItem>
+              <MenuItem value="Finance & Partnership">
+                Finance & Partnership
+              </MenuItem> */}
+              {DepartmentData.map((data) => (
+                <MenuItem value={data.name} key={data.id}>{data.name}</MenuItem>
+              ))}
+              {/* {DepartmentData.map(departmentDropDown)} */}
             </Select>
           </FormControl>
         ) : null}
