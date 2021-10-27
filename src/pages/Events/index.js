@@ -4,6 +4,7 @@ import React from "react";
 import { Block, ParallaxBlock } from "../../components/Block";
 import { Card } from "../../components/Card";
 import getEvents from "./events_data";
+import { SearchAppBar } from "../../components/SearchAppBar";
 
 
 export default function Events() {
@@ -20,7 +21,17 @@ export default function Events() {
             <HTimeLine />
           </Hidden> */}
         </ParallaxBlock>
-        <Block>
+
+        <SearchAppBar 
+          headings={[
+            "Past Events", 
+            "Future Events", 
+            "Trending Events", 
+            "My Favorite"
+          ]} 
+        />
+
+        <Block backgroundColor="#D0CFE2">
           <Grid container spacing={4}>
             {events.map((event) => (
               <Card to={`/event/${event.id}`} image={event.image} key={event.id}>
