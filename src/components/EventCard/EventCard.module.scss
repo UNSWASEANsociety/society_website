@@ -1,0 +1,17 @@
+.link {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  &:link,
+  :visited,
+  :hover,
+  :active {
+    // color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+}
+
+.card {
+  &:hover {
+    transform: scale(1.025);
+  }
+}

@@ -3,8 +3,8 @@ import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
+import Link from '@mui/material/Link';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -45,10 +45,12 @@ const SearchAppBar = ({headings}) => {
         <Toolbar>
           {headings.map(heading => {
             return (
-              <Typography
+              <Link
+                underline="hover"
                 variant="h6"
                 noWrap
                 component="div"
+                color="white"
                 sx={{ 
                   fontSize: 18, 
                   flexGrow: 1, 
@@ -57,7 +59,7 @@ const SearchAppBar = ({headings}) => {
                 }}
               >
                 {heading}
-              </Typography>
+              </Link>
             )
           })}
           <Search>

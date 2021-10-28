@@ -5,7 +5,10 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./Card.module.scss";
+import styles from "./EventCard.module.scss";
+import IconButton from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -25,13 +28,19 @@ const useStyles = makeStyles((theme) => ({
   card: {
     borderRadius: "25px",
     height: "100%",
+    width: "100%",
     display: "flex",
     transition: "transform 0.2s",
     flexDirection: "column",
+    paddingLeft: "10px",
+    paddingRight: "10px",
+    position: "relative"
   },
   cardMedia: {
     paddingTop: "56.25%", // 16:9
-  },
+    paddingLeft: "95%", // 16:9
+    width: "20%"
+  },  
   cardContent: {
     flexGrow: 1,
   },
@@ -50,12 +59,37 @@ const Card = ({ image, to, children }) => {
         image={image}
         title="Image title"
       />
+      <div 
+        style={{
+          position: "absolute",
+          top: "20px",
+          left: "20px"
+        }}
+      >
+        <IconButton 
+          aria-label="add to favorites" 
+          style={{
+            backgroundColor: "#E2C8E9"
+          }}>
+          <FavoriteIcon color="warning" />
+        </IconButton>
+        <IconButton 
+          aria-label="share" 
+          style={{
+            backgroundColor: "#E2C8E9",
+            marginLeft: "10px"
+          }}
+        >
+          <ShareIcon />
+        </IconButton>
+      </div>
+      
       <CardContent className={classes.cardContent}>{children}</CardContent>
     </MUICard>
   );
 
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} lg={4}>
       {to ? (
         <Link to={to} className={styles.link}>
           {card}
