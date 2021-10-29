@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Button, Typography } from "@material-ui/core/";
+import { Button, Typography, Grid } from "@material-ui/core/";
 import React from "react";
 import Link from "next/link";
 import ReactTypingEffect from "react-typing-effect";
@@ -17,7 +17,17 @@ import routes from "@/constants/routes";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
+import dynamic from "next/dynamic";
+
 const Home = () => {
+  const Map = dynamic(
+    () => import("@/components/Map"), // replace '@components/map' with your component's location
+    {
+      loading: () => <p>A map is loading</p>,
+      ssr: false, // This line is important. It's what prevents server-side render
+    }
+  );
+
   const events = getEvents();
   return (
     <>
@@ -117,6 +127,25 @@ const Home = () => {
           </Button> */}
         </div>
       </Block>
+      <div style={{ padding: "5rem" }}>
+        <Grid container>
+          <Grid items xs={6}>
+            <Typography component="h2" variant="h2">
+              Visit Us
+            </Typography>
+            <Typography component="p" variant="h4">
+              Location <br />
+              University of New South Wales
+              <br />
+              Kensington, Sydney, NSW, 2052
+            </Typography>
+          </Grid>
+          <Grid items xs={6}>
+            <Map />
+          </Grid>
+        </Grid>
+      </div>
+
       <Footer />
     </>
   );
