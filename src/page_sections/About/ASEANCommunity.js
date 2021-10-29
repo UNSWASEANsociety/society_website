@@ -6,9 +6,18 @@ const ASEANCommunity = () => {
     <>
       <Grid container>
         <Grid item md={5}>
-          <Typography component="h2" variant="h3" gutterBottom>
-            ASEAN Community
-          </Typography>
+          <div
+            style={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <Typography component="h2" variant="h3" gutterBottom>
+              ASEAN Community
+            </Typography>
+          </div>
         </Grid>
         <Grid item md={7}>
           <Typography variant="h6" paragraph>

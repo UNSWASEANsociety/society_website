@@ -23,7 +23,6 @@ const Home = () => {
   const Map = dynamic(
     () => import("@/components/Map"), // replace '@components/map' with your component's location
     {
-      loading: () => <p>A map is loading</p>,
       ssr: false, // This line is important. It's what prevents server-side render
     }
   );
