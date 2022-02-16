@@ -29,3 +29,7 @@ Installing project dependencies
 Starting development server
 
         npm run dev
+
+## Connected with Jira
+
+- link: https://uasw2022-frontend.atlassian.net/jira/software/projects/UAS/boards/1
