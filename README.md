@@ -33,3 +33,11 @@ Starting development server
 ## Connected with Jira
 
 - link: https://uasw2022-frontend.atlassian.net/jira/software/projects/UAS/boards/1
+
+Connect issues with the branch by using
+
+        git checkout -b UAS-<issue no>-<branchname>
+
+To link commits to issues, use
+
+        git commit -m "UAS-<issue no> <commit message>"
