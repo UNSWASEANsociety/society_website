@@ -11,7 +11,7 @@ const About = () => {
         align="center"
         gutterBottom
       >
-        ABOUT UNSW ASEAN SOCIETY HELLO
+        ABOUT UNSW ASEANSoc
       </Typography>
       <hr />
       <br />
