@@ -20,9 +20,9 @@ const events = [
 
   {
     id: 2,
-    name: "UNSWASEANSoc Case Competition 2023",
+    name: "UNSW ASEANSoc Case Competition 2025",
     image: "/events/casecomp2023.png",
-    date: "20 June 2023",
+    date: "Week 7",
     location: "UNSW",
     price: "free",
     speaker: [],
