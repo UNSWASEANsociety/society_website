@@ -37,6 +37,42 @@ const events = [
               Our main goal is to propose positive impacts on ASEAN, encompassing various lenses like economic, socio-cultural, and 
               environmental sectors.`,
   },
+
+    {
+    id: 3,
+    name: "Munch and Mingle! - Hosted by MSO",
+    image: "/events/munchmingle.png",
+    date: "Week 4",
+    location: "UNSW",
+    price: "free",
+    speaker: [],
+    schedule: [],
+    description: `🍱 Looking for something more laid-back? Come join us at Munch & Mingle — a social night hosted by ASEANSoc for good food, 
+              great vibes, and even better company! This is your chance to meet fellow members, enjoy a spread of Southeast Asian snacks, 
+              and mingle over casual convos and games. Whether you're a new face or a returning member, we'd love to see you there! 🌟🤝🎉`,
+  },
+
+      {
+    id: 4,
+    name: "Career Exposition - Hosted by ACYA",
+    image: "/events/careerExpo.png",
+    date: "Week 6",
+    location: "UNSW",
+    price: "free",
+    speaker: [],
+    schedule: [],
+    description: `🚀 Ready to explore career pathways and connect with industry professionals? Join UNSW ASEAN Society at the 
+              Career Exposition hosted in collaboration with ACYA (Australia-China Youth Association)! 
+
+              🤝 This is your chance to gain valuable insights into graduate opportunities, internships, and industry expectations 
+              from leading organisations across sectors such as business, consulting, government, tech, and more.
+
+              💬 The event will feature speaker panels, recruiter Q&As, and casual networking sessions to help you build your 
+              confidence and career connections. Whether you're just exploring or actively applying, there's something here for everyone.
+
+              🎯 Don't miss out on this great opportunity to expand your network, sharpen your professional toolkit, and prepare 
+              for what’s next in your career journey!`,
+  },
 ];
 
 const getEvents = () => {

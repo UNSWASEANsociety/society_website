@@ -37,9 +37,19 @@ const Event = () => {
         image={selectedEvent.image}
         // blur={2}
       >
-          <Typography component="h1" variant="h3" align="center" gutterBottom>
-            {selectedEvent.name}
-          </Typography>
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          gutterBottom
+          style={{
+            color: 'white',
+            textShadow: '2px 2px 8px rgba(0,0,0,0.7)',
+            fontWeight: 'bold'
+          }}
+        >
+          {selectedEvent.name}
+        </Typography>
       </ParallaxBlock>
       <Block>
         <IconSummary
