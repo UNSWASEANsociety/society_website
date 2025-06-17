@@ -18,7 +18,12 @@ const IconSummary = ({ date, location, price, speaker }) => {
               Date
             </Typography>
             <Typography component="h4" paragraph>
-              {date}
+              {date.split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
             </Typography>
           </Typography>
         </Grid>
@@ -40,7 +45,12 @@ const IconSummary = ({ date, location, price, speaker }) => {
               Price
             </Typography>
             <Typography component="h4" paragraph>
-              {price}
+              {price.split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
             </Typography>
           </Typography>
         </Grid>

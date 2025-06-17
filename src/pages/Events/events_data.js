@@ -1,28 +1,40 @@
 const events = [
   {
     id: 1,
-    name: "Young Entrepreneurs Case Competition",
-    image: "/events/YECC.jpg",
-    date: "21 June 2021",
-    location: "UNSW",
+    name: "Badminton Day",
+    image: "/events/badmin19june.jpg",
+    date: "19 June 2025 \n2-4pm",
+    location: "UNSW Fitness & Aquatic Centre",
     price: "free",
     speaker: [],
     schedule: [],
     // Organisers: [],
     // eventType: {isFormal: true, isInternal: true},
     description: `
-    Have you always thought of a solution to a problem no one has ever done before?
-    Do you have what it takes to start your entrepreneurial journey?
-    Time to make all those dreams one step closer to reality! The ASEAN Society Young Entrepreneur Case Competition is aimed at generating real solutions to economic, political, and socio-cultural problems faced by ASEAN businesses. You’ll be contributing to the solution of real issues in Southeast Asia and facilitating discussion of innovative ideas!
-    The prizes? A seat in Guru Advantage’s Global Virtual Internship Program (worth over $1000), a Business Leaders Masterclass, personalized letters of commendation from The Australian-ASEAN Business Council, and more!*
-    Think you got a winning pitch? Apply now! The internship is also eligible for international and remote students 🤩`,
+    🏸 Ready to smash some shuttlecocks? Join us for our upcoming Badminton Social Event, open to all skill levels — whether you're a seasoned player or just want to give it a go! 
+    We'll be playing friendly doubles and mixing teams so everyone gets a chance to play and meet new people. 👫💥 
+    Don't forget your racquets and shuttlecocks, and maybe a friend as well! Come for the sport, stay for the community vibes. 🎉🔥`,
   },
 
   {
     id: 2,
+    name: "Munch & Mingle!",
+    image: "/events/munchnmingle.jpg",
+    date: "27 June 2025 \n5-8pm",
+    location: "UNSW Tyree G16",
+    price: "Arc member : $5 \nNon Arc member : $6",
+    speaker: [],
+    schedule: [],
+    description: `🍱 Looking for something more laid-back? Come join us at Munch & Mingle — a social night hosted by ASEANSoc for good food, 
+              great vibes, and even better company! This is your chance to meet fellow members, enjoy a spread of Southeast Asian snacks, 
+              and mingle over casual convos and games. Whether you're a new face or a returning member, we'd love to see you there! 🌟🤝🎉`,
+  },
+
+  {
+    id: 3,
     name: "UNSW ASEANSoc Case Competition 2025",
     image: "/events/casecomp2023.png",
-    date: "Week 7",
+    date: "2025 Term 3",
     location: "UNSW",
     price: "free",
     speaker: [],
@@ -38,21 +50,7 @@ const events = [
               environmental sectors.`,
   },
 
-    {
-    id: 3,
-    name: "Munch and Mingle! - Hosted by MSO",
-    image: "/events/munchmingle.png",
-    date: "Week 4",
-    location: "UNSW",
-    price: "free",
-    speaker: [],
-    schedule: [],
-    description: `🍱 Looking for something more laid-back? Come join us at Munch & Mingle — a social night hosted by ASEANSoc for good food, 
-              great vibes, and even better company! This is your chance to meet fellow members, enjoy a spread of Southeast Asian snacks, 
-              and mingle over casual convos and games. Whether you're a new face or a returning member, we'd love to see you there! 🌟🤝🎉`,
-  },
-
-      {
+  {
     id: 4,
     name: "Career Exposition - Hosted by ACYA",
     image: "/events/careerExpo.png",
