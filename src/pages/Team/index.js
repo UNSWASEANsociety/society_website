@@ -6,6 +6,8 @@ import { Block, ParallaxBlock } from "../../components/Block";
 import { Card } from "../../components/Card";
 import tempteam from "./TempTeam";
 import {Title} from "../../components/Dynamic_Typography"
+import Tooltip from "@material-ui/core/Tooltip";
+
 
 const getTeam = () => {
   return tempteam;
@@ -46,8 +48,28 @@ export default function Team() {
       <Typography gutterBottom variant="p" component="h3" align="center">
         {member.role}
       </Typography>
+      {member.email && (
+        <Typography variant="body1" align="center">
+          <a href={`mailto:${member.email}`} style={{ color: "inherit" }}>
+            {member.email}
+          </a>
+        </Typography>
+      )}
       <Typography align="center">
-        <LinkedIn />
+        {member.linkedin ? (
+          <Tooltip title="Follow on LinkedIn" placement="top">
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "inherit" }}
+            >
+              <LinkedIn />
+            </a>
+          </Tooltip>
+        ) : (
+          <LinkedIn style={{ opacity: 0.3 }} /> // faded icon if no link
+        )}
       </Typography>
     </Card>
   );
