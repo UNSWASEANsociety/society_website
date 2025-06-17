@@ -3,18 +3,21 @@ const TeamList = [
     category: "executive",
     role: "Co-President",
     name: "Daryl Lee",
-
+    linkedin: "https://www.linkedin.com",
+    email: "Darylee@gmail.com"
     // email:"", linkedin:"",
   },
   {
     category: "executive",
     role: "Co-President",
     name: "Fiona Wahidin",
+    linkedin: "https://www.linkedin.com",
+    email: "FionaWahidin@gmail.com"
   },
-  { category: "executive", role: "VP (Internal)", name: "Brandon Nathaniel" },
-  { category: "executive", role: "VP (External)", name: "Zainul Punjani" },
-  { category: "executive", role: "Secretary & Arc Delegate", name: "Sisi Zhu" },
-  { category: "executive", role: "Treasurer", name: "Krishant" },
+  { category: "executive", role: "VP (Internal)", name: "Brandon Nathaniel" , linkedin: "https://www.linkedin.com" , email: "BrandonNathaniel@gmail.com" },
+  { category: "executive", role: "VP (External)", name: "Zainul Punjani" , linkedin: "https://www.linkedin.com" , email: "ZainulPunjani@gmail.com" },
+  { category: "executive", role: "Secretary & Arc Delegate", name: "Sisi Zhu" , linkedin: "https://www.linkedin.com" , email: "SisiZhu@gmail.com" },
+  { category: "executive", role: "Treasurer", name: "Krishant" , linkedin: "https://www.linkedin.com" , email: "Krishant@gmail.com" },
 
   { category: "directors", role: "Operations", name: "Than Tam" },
   { category: "directors", role: "Operations", name: "Tín Huỳnh" },
