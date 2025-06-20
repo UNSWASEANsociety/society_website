@@ -3,8 +3,7 @@ import { push as Menu } from "react-burger-menu";
 
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
-
-import getWidth from "../../utils/getwidth"
+// import getWidth from "../../utils/getwidth"
 import MenuStyle from "./MobileMenu.module.scss";
 
 
