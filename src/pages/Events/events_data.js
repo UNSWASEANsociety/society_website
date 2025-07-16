@@ -52,7 +52,7 @@ const events = [
 
   {
     id: 4,
-    name: "AseanSoc Movie Night",
+    name: "ASEANSoc Movie Night",
     image: "/events/movienight.jpg",
     date: "23 July 2025 6.30pm",
     location: "Colombo Theatre A, UNSW",
