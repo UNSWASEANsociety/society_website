@@ -52,25 +52,18 @@ const events = [
 
   {
     id: 4,
-    name: "Career Exposition - Hosted by ACYA",
-    image: "/events/careerExpo.png",
-    date: "Week 6",
-    location: "UNSW",
+    name: "AseanSoc Movie Night",
+    image: "/events/movienight.jpg",
+    date: "23 July 2025 6.30pm",
+    location: "Colombo Theatre A, UNSW",
     price: "free",
     speaker: [],
     schedule: [],
-    description: `🚀 Ready to explore career pathways and connect with industry professionals? Join UNSW ASEAN Society at the 
-              Career Exposition hosted in collaboration with ACYA (Australia-China Youth Association)! 
-
-              🤝 This is your chance to gain valuable insights into graduate opportunities, internships, and industry expectations 
-              from leading organisations across sectors such as business, consulting, government, tech, and more.
-
-              💬 The event will feature speaker panels, recruiter Q&As, and casual networking sessions to help you build your 
-              confidence and career connections. Whether you're just exploring or actively applying, there's something here for everyone.
-
-              🎯 Don't miss out on this great opportunity to expand your network, sharpen your professional toolkit, and prepare 
-              for what’s next in your career journey!`,
+    description: `🎬 Looking for a midweek breather? Come unwind at our ASEANSoc Movie Night! We're bringing you a chill evening packed with snacks, laughs, and one chaotic K-pop-infused adventure on the big screen — K-POP DEMON HUNTERS! 💥🎤
+                Expect plenty of fun as we take over Colombo Theatre A for a night you won’t forget. Whether you’re flying solo or bringing friends along, everyone’s welcome!
+                `,
   },
+
 ];
 
 const getEvents = () => {
