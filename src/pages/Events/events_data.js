@@ -64,6 +64,22 @@ const events = [
                 `,
   },
 
+    {
+    id: 5,
+    name: "Discover a Future With Salesforce",
+    image: "/events/salesforce.jpg",
+    date: "30th September 2025, 2-5pm",
+    location: "Salesforce Tower, Sydney",
+    price: "free",
+    speaker: [],
+    schedule: [],
+    description: `Discover a Future with Salesforce!
+                Salesforce is the world's leading CRM platform, helping businesses connect with their customers in smarter ways with AI, data, and automation solutions at its core. As a global leader in the tech industry, it's taking centre stage in the new era of AI.
+                We invite you to step inside the world of Salesforce at our Circular Quay office to learn more about who we are. You will hear from employees about their diverse careers, get hands-on with AI by learning how to build an agent, tour the office, and connect with experts and peers during an informal networking session.
+                Whether you’re curious about tech, exploring career options after university, or ready to dive into the future of AI and CRM, this is your chance to gain real insights and get a taste of the Salesforce ecosystem!
+                `,
+  },
+
 ];
 
 const getEvents = () => {
