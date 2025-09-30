@@ -80,6 +80,31 @@ const events = [
                 `,
   },
 
+    {
+    id: 6,
+    name: "ASEANSoc x MSS Badminton Day",
+    image: "/events/badmin1oct.jpg",
+    date: "1st October 2025, 3-5pm",
+    location: "UNSW Fitness & Aquatic Centre",
+    price: "$6",
+    speaker: [],
+    schedule: [],
+    description: `ASEANSoc x MSS Badminton Day! Smash your stress away and rally with friends - this time we've got 3 courts ready for you!
+                `,
+  },
+
+    {
+    id: 7,
+    name: "Asia Australia Career Exposition",
+    image: "/events/careerexpo8oct.jpg",
+    date: "8th October 2025, 11-3pm",
+    location: "UNSW Roundhouse",
+    price: "Free Entry",
+    speaker: [],
+    schedule: [],
+    description: `Looking to kickstart your career across Asia and Australia with real industry connections, insider advice, and practical career tools? Whether you're exploring opportunities, building your network, or just after a free LinkedIn glow-up, the Asia-Australia Careers Expo is your one-stop launchpad to getting career-ready in a global context.
+                `,
+  },
 ];
 
 const getEvents = () => {
